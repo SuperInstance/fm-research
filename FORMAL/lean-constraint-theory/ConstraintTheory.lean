@@ -6,3 +6,8 @@ import ConstraintTheory.Spline
 import ConstraintTheory.GenomicExpression
 import ConstraintTheory.FluxVM
 import ConstraintTheory.Integration
+import ConstraintTheory.Universal
+import ConstraintTheory.HolonomyCohomology
+import ConstraintTheory.TuringComplete
+import ConstraintTheory.HyperbolicUniversal
+import ConstraintTheory.UniversalEquation
