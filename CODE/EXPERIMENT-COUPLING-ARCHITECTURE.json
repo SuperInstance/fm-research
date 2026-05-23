@@ -1,0 +1,50 @@
+{
+  "fully_connected": {
+    "total_quality": 4.763844435661736,
+    "total_diversity": 5.234944245132407,
+    "mean_quality": 0.595480554457717,
+    "quality_std": 0.3779497508733569
+  },
+  "hierarchical": {
+    "total_quality": 4.977069123866162,
+    "total_diversity": 5.270496730632383,
+    "mean_quality": 0.6221336404832702,
+    "quality_std": 0.4046634402730397
+  },
+  "ring": {
+    "total_quality": 4.421389110523338,
+    "total_diversity": 5.015750223083455,
+    "mean_quality": 0.5526736388154172,
+    "quality_std": 0.3435529694844029
+  },
+  "small_world": {
+    "total_quality": 4.694087223191028,
+    "total_diversity": 5.06337960919827,
+    "mean_quality": 0.5867609028988785,
+    "quality_std": 0.3717918173425
+  },
+  "sparse": {
+    "total_quality": 4.849141509190293,
+    "total_diversity": 5.409380271179434,
+    "mean_quality": 0.6061426886487866,
+    "quality_std": 0.3853579841995725
+  },
+  "expert_hub": {
+    "total_quality": 4.581649736249527,
+    "total_diversity": 5.0246956463985635,
+    "mean_quality": 0.5727062170311908,
+    "quality_std": 0.3459542266493912
+  },
+  "separated": {
+    "total_quality": 4.582048388123792,
+    "total_diversity": 5.12014886079054,
+    "mean_quality": 0.572756048515474,
+    "quality_std": 0.3519797878729289
+  },
+  "none": {
+    "total_quality": 4.951150500408273,
+    "total_diversity": 5.37052056781538,
+    "mean_quality": 0.6188938125510342,
+    "quality_std": 0.3913142823459944
+  }
+}
