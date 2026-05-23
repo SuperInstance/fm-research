@@ -1,0 +1,44 @@
+{
+  "precision_ratchet": [
+    {
+      "target": 0.5,
+      "model": "mean_field",
+      "K_required": 0.2,
+      "achieved": 0.5449610270146926,
+      "model_complexity": 1
+    },
+    {
+      "target": 0.8,
+      "model": "mean_field",
+      "K_required": 0.30000000000000004,
+      "achieved": 0.945386417746331,
+      "model_complexity": 1
+    },
+    {
+      "target": 0.95,
+      "model": "mean_field",
+      "K_required": 0.4,
+      "achieved": 0.9646799061701024,
+      "model_complexity": 1
+    },
+    {
+      "target": 0.99,
+      "model": "mean_field",
+      "K_required": 0.8,
+      "achieved": 0.9913137507168992,
+      "model_complexity": 1
+    }
+  ],
+  "koch_lengths": [
+    1.0,
+    1.3333333333333333,
+    1.7777777777777777,
+    2.37037037037037,
+    3.160493827160493,
+    4.213991769547324,
+    5.618655692729765,
+    7.491540923639686
+  ],
+  "gps_drift_meters": 22688345.051342655,
+  "huygens_kappa_threshold": 0.1
+}
