@@ -1,0 +1,108 @@
+{
+  "automation_results": [
+    {
+      "automation": 0,
+      "n_manual": 5,
+      "bandwidth_creative": 2.5,
+      "epsilon": 0.25,
+      "avg_diversity": 8.204655581724083,
+      "max_diversity": 9.332277186198757
+    },
+    {
+      "automation": 1,
+      "n_manual": 4,
+      "bandwidth_creative": 4.0,
+      "epsilon": 0.4,
+      "avg_diversity": 8.209581424533907,
+      "max_diversity": 9.175002384891409
+    },
+    {
+      "automation": 2,
+      "n_manual": 3,
+      "bandwidth_creative": 5.5,
+      "epsilon": 0.55,
+      "avg_diversity": 8.213719044130006,
+      "max_diversity": 9.20191123756125
+    },
+    {
+      "automation": 3,
+      "n_manual": 2,
+      "bandwidth_creative": 7.0,
+      "epsilon": 0.7,
+      "avg_diversity": 8.206975095779152,
+      "max_diversity": 8.950596144291806
+    },
+    {
+      "automation": 4,
+      "n_manual": 1,
+      "bandwidth_creative": 8.5,
+      "epsilon": 0.85,
+      "avg_diversity": 8.209665093284707,
+      "max_diversity": 9.11373432037902
+    },
+    {
+      "automation": 5,
+      "n_manual": 0,
+      "bandwidth_creative": 10.0,
+      "epsilon": 1.0,
+      "avg_diversity": 8.217030206382804,
+      "max_diversity": 8.874470005245966
+    }
+  ],
+  "era_results": [
+    {
+      "automation": 0,
+      "n_manual": 5,
+      "bandwidth_creative": 2.5,
+      "epsilon": 0.25,
+      "avg_diversity": 8.204838708462216,
+      "max_diversity": 9.23722386276591,
+      "era": "Ancient (no automation)"
+    },
+    {
+      "automation": 1,
+      "n_manual": 4,
+      "bandwidth_creative": 4.0,
+      "epsilon": 0.4,
+      "avg_diversity": 8.209130481615583,
+      "max_diversity": 8.974523000790382,
+      "era": "Medieval (notation)"
+    },
+    {
+      "automation": 2,
+      "n_manual": 3,
+      "bandwidth_creative": 5.5,
+      "epsilon": 0.55,
+      "avg_diversity": 8.210572234496508,
+      "max_diversity": 8.867995813574495,
+      "era": "Baroque (temperament)"
+    },
+    {
+      "automation": 3,
+      "n_manual": 2,
+      "bandwidth_creative": 7.0,
+      "epsilon": 0.7,
+      "avg_diversity": 8.208731359900144,
+      "max_diversity": 9.145386478710208,
+      "era": "Classical (form)"
+    },
+    {
+      "automation": 4,
+      "n_manual": 1,
+      "bandwidth_creative": 8.5,
+      "epsilon": 0.85,
+      "avg_diversity": 8.210250096758635,
+      "max_diversity": 8.938199831026681,
+      "era": "Jazz (rhythm section)"
+    },
+    {
+      "automation": 5,
+      "n_manual": 0,
+      "bandwidth_creative": 10.0,
+      "epsilon": 1.0,
+      "avg_diversity": 8.226230907628326,
+      "max_diversity": 9.372949991459237,
+      "era": "Electronic (DAW)"
+    }
+  ]
+}
