@@ -1,0 +1,62 @@
+{
+  "domain_signatures": {
+    "stochastic_resonance": {
+      "k": 2.673,
+      "x0": 1.595
+    },
+    "yerkes_dodson": {
+      "k": 1.745,
+      "x0": 1.128
+    },
+    "kuramoto_sync": {
+      "k": 5.693,
+      "x0": 0.877
+    },
+    "lorenz_chaos": {
+      "k": 0.041,
+      "x0": -187.3
+    },
+    "soft_snap": {
+      "k": 10.0,
+      "x0": 0.5
+    },
+    "cultural_adoption": {
+      "k": 1.5,
+      "x0": 5.0
+    },
+    "immune_response": {
+      "k": 4.605,
+      "x0": -1.0
+    },
+    "neural_activation": {
+      "k": 2.0,
+      "x0": 2.0
+    }
+  },
+  "universal_sigmoid": {
+    "k": 8.869004966823042,
+    "x0": 0.4999999999861776
+  },
+  "predictions": {
+    "economic_market_crash": {
+      "predicted_k": 2.8070493572128434,
+      "predicted_x0": 3.0025
+    },
+    "pandemic_spread": {
+      "predicted_k": 3.7427324762837912,
+      "predicted_x0": 0.0024999999999999467
+    },
+    "language_acquisition": {
+      "predicted_k": 0.9356831190709478,
+      "predicted_x0": 4.0024999999999995
+    },
+    "climate_tipping": {
+      "predicted_k": 5.614098714425687,
+      "predicted_x0": 6.0024999999999995
+    },
+    "love_at_first_sight": {
+      "predicted_k": 18.713662381418956,
+      "predicted_x0": 0
+    }
+  }
+}
