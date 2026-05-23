@@ -1,0 +1,7 @@
+name = "ConstraintTheory"
+version = "0.1.0"
+defaultTargets = ["ConstraintTheory"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
