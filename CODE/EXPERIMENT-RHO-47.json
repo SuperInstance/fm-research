@@ -1,0 +1,254 @@
+{
+  "grid_search": [
+    {
+      "rho": 20,
+      "sigma": 5,
+      "diversity": 6.23189407170891,
+      "n_spectral_peaks": 18,
+      "score": 17.44930340078495
+    },
+    {
+      "rho": 20,
+      "sigma": 7,
+      "diversity": 6.542168466164632,
+      "n_spectral_peaks": 15,
+      "score": 16.35542116541158
+    },
+    {
+      "rho": 20,
+      "sigma": 9,
+      "diversity": 6.634757226852172,
+      "n_spectral_peaks": 22,
+      "score": 21.231223125926952
+    },
+    {
+      "rho": 20,
+      "sigma": 11,
+      "diversity": 6.655237590893371,
+      "n_spectral_peaks": 18,
+      "score": 18.63466525450144
+    },
+    {
+      "rho": 20,
+      "sigma": 13,
+      "diversity": 6.633031232468009,
+      "n_spectral_peaks": 18,
+      "score": 18.572487450910426
+    },
+    {
+      "rho": 25,
+      "sigma": 5,
+      "diversity": 7.277571587501084,
+      "n_spectral_peaks": 19,
+      "score": 21.104957603753146
+    },
+    {
+      "rho": 25,
+      "sigma": 7,
+      "diversity": 7.531813825285693,
+      "n_spectral_peaks": 19,
+      "score": 21.842260093328512
+    },
+    {
+      "rho": 25,
+      "sigma": 9,
+      "diversity": 7.6677698917351504,
+      "n_spectral_peaks": 19,
+      "score": 22.23653268603194
+    },
+    {
+      "rho": 25,
+      "sigma": 11,
+      "diversity": 7.684882000302119,
+      "n_spectral_peaks": 17,
+      "score": 20.749181400815722
+    },
+    {
+      "rho": 25,
+      "sigma": 13,
+      "diversity": 7.66578013191975,
+      "n_spectral_peaks": 17,
+      "score": 20.697606356183325
+    },
+    {
+      "rho": 30,
+      "sigma": 5,
+      "diversity": 8.142269447533499,
+      "n_spectral_peaks": 17,
+      "score": 21.98412750834045
+    },
+    {
+      "rho": 30,
+      "sigma": 7,
+      "diversity": 8.412176207800563,
+      "n_spectral_peaks": 19,
+      "score": 24.395311002621636
+    },
+    {
+      "rho": 30,
+      "sigma": 9,
+      "diversity": 8.523880057829697,
+      "n_spectral_peaks": 19,
+      "score": 24.719252167706124
+    },
+    {
+      "rho": 30,
+      "sigma": 11,
+      "diversity": 8.57123595618924,
+      "n_spectral_peaks": 21,
+      "score": 26.570831464186643
+    },
+    {
+      "rho": 30,
+      "sigma": 13,
+      "diversity": 8.55308838243906,
+      "n_spectral_peaks": 20,
+      "score": 25.659265147317182
+    },
+    {
+      "rho": 35,
+      "sigma": 5,
+      "diversity": 8.914357719157126,
+      "n_spectral_peaks": 16,
+      "score": 23.177330069808527
+    },
+    {
+      "rho": 35,
+      "sigma": 7,
+      "diversity": 9.1261535409528,
+      "n_spectral_peaks": 18,
+      "score": 25.55322991466784
+    },
+    {
+      "rho": 35,
+      "sigma": 9,
+      "diversity": 9.306657366688762,
+      "n_spectral_peaks": 19,
+      "score": 26.989306363397414
+    },
+    {
+      "rho": 35,
+      "sigma": 11,
+      "diversity": 9.354996057575638,
+      "n_spectral_peaks": 17,
+      "score": 25.258489355454227
+    },
+    {
+      "rho": 35,
+      "sigma": 13,
+      "diversity": 9.350034754971748,
+      "n_spectral_peaks": 19,
+      "score": 27.115100789418072
+    },
+    {
+      "rho": 40,
+      "sigma": 5,
+      "diversity": 9.644347418647738,
+      "n_spectral_peaks": 21,
+      "score": 29.89747699780799
+    },
+    {
+      "rho": 40,
+      "sigma": 7,
+      "diversity": 9.914618827496824,
+      "n_spectral_peaks": 16,
+      "score": 25.778008951491742
+    },
+    {
+      "rho": 40,
+      "sigma": 9,
+      "diversity": 10.024647575411912,
+      "n_spectral_peaks": 18,
+      "score": 28.06901321115335
+    },
+    {
+      "rho": 40,
+      "sigma": 11,
+      "diversity": 10.072526561542256,
+      "n_spectral_peaks": 17,
+      "score": 27.195821716164094
+    },
+    {
+      "rho": 40,
+      "sigma": 13,
+      "diversity": 10.076777150620645,
+      "n_spectral_peaks": 15,
+      "score": 25.19194287655161
+    },
+    {
+      "rho": 45,
+      "sigma": 5,
+      "diversity": 10.304964245146644,
+      "n_spectral_peaks": 18,
+      "score": 28.853899886410602
+    },
+    {
+      "rho": 45,
+      "sigma": 7,
+      "diversity": 10.578215250428507,
+      "n_spectral_peaks": 18,
+      "score": 29.619002701199815
+    },
+    {
+      "rho": 45,
+      "sigma": 9,
+      "diversity": 10.683970141904622,
+      "n_spectral_peaks": 21,
+      "score": 33.12030743990433
+    },
+    {
+      "rho": 45,
+      "sigma": 11,
+      "diversity": 10.751491377513469,
+      "n_spectral_peaks": 23,
+      "score": 35.479921545794454
+    },
+    {
+      "rho": 45,
+      "sigma": 13,
+      "diversity": 10.770869812571998,
+      "n_spectral_peaks": 21,
+      "score": 33.389696418973195
+    },
+    {
+      "rho": 50,
+      "sigma": 5,
+      "diversity": 11.130164910830409,
+      "n_spectral_peaks": 20,
+      "score": 33.39049473249123
+    },
+    {
+      "rho": 50,
+      "sigma": 7,
+      "diversity": 11.331279812656131,
+      "n_spectral_peaks": 21,
+      "score": 35.126967419234006
+    },
+    {
+      "rho": 50,
+      "sigma": 9,
+      "diversity": 11.393038463641181,
+      "n_spectral_peaks": 20,
+      "score": 34.17911539092354
+    },
+    {
+      "rho": 50,
+      "sigma": 11,
+      "diversity": 11.405464922303707,
+      "n_spectral_peaks": 19,
+      "score": 33.07584827468076
+    },
+    {
+      "rho": 50,
+      "sigma": 13,
+      "diversity": 11.42473249242642,
+      "n_spectral_peaks": 17,
+      "score": 30.846777729551338
+    }
+  ],
+  "best_config": {
+    "rho": 45,
+    "sigma": 11,
+    "score": 35.479921545794454
+  }
+}
