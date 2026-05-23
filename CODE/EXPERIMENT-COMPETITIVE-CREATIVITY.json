@@ -1,0 +1,89 @@
+{
+  "coupling_modes": {
+    "cooperative": {
+      "div_a": 6.592818927102551,
+      "div_b": 8.871987753461937,
+      "cross_corr": 0.001332867389417324,
+      "energy_transfer": 0.09014111508069367,
+      "total_creative_output": 15.464806680564488
+    },
+    "competitive": {
+      "div_a": 6.59360404927102,
+      "div_b": 8.86028722736979,
+      "cross_corr": -0.0016600645046430953,
+      "energy_transfer": 0.09053790936154547,
+      "total_creative_output": 15.45389127664081
+    },
+    "predator_prey": {
+      "div_a": 6.555334275662806,
+      "div_b": 8.87193867036055,
+      "cross_corr": 0.0016544377599410258,
+      "energy_transfer": 0.08996111408048522,
+      "total_creative_output": 15.427272946023354
+    },
+    "mutualism": {
+      "div_a": 6.586829114016738,
+      "div_b": 8.780092605474684,
+      "cross_corr": -0.0015340456413441925,
+      "energy_transfer": 0.008190559987768856,
+      "total_creative_output": 15.366921719491422
+    },
+    "parasitic": {
+      "div_a": 6.568602279638533,
+      "div_b": 8.806224565500864,
+      "cross_corr": -0.0027394664801501096,
+      "energy_transfer": 0.0006811327148345569,
+      "total_creative_output": 15.374826845139397
+    }
+  },
+  "phase_diagram": [
+    {
+      "strength": 0.0,
+      "total_diversity": 12.661551698411078,
+      "correlation": 0.0035112965306070627
+    },
+    {
+      "strength": 0.001,
+      "total_diversity": 12.539919333786163,
+      "correlation": 0.02264288225799435
+    },
+    {
+      "strength": 0.005,
+      "total_diversity": 12.228677582145139,
+      "correlation": 0.010513543702739605
+    },
+    {
+      "strength": 0.01,
+      "total_diversity": 14.097814950890552,
+      "correlation": 0.0027735212830740366
+    },
+    {
+      "strength": 0.05,
+      "total_diversity": 15.829868282874298,
+      "correlation": 0.010035508432019497
+    },
+    {
+      "strength": 0.1,
+      "total_diversity": 15.99260473652729,
+      "correlation": 0.03518960151946347
+    },
+    {
+      "strength": 0.5,
+      "total_diversity": 15.090460676158344,
+      "correlation": 0.08098783379159336
+    }
+  ],
+  "K_evolution": [
+    0.009990188226233931,
+    0.025600604801395425,
+    0.07307517085353987,
+    0.20895798291871062,
+    0.5818336875772918,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "best_mode": "cooperative"
+}

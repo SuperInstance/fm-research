@@ -157,7 +157,7 @@ for step in range(20000):
 
 print(f"\n  K evolved: {K_history[0]:.6f} → {K_history[-1]:.6f}")
 
-with open('CODE/EXPERIMENT-COMPETITIVE-CREATIVITY.json', 'w') as f:
+with open('EXPERIMENT-COMPETITIVE-CREATIVITY.json', 'w') as f:
     json.dump({
         'coupling_modes': {k: v for k, v in results.items()},
         'phase_diagram': phase_results,
