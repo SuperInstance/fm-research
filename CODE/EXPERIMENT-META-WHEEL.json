@@ -1,0 +1,408 @@
+{
+  "iterations": [
+    {
+      "iteration": 0,
+      "experiment": "lorenz_sweep",
+      "result": {
+        "best_rho": 36.94736842105263,
+        "best_div": 11.305892632147279,
+        "type": "lorenz_sweep"
+      },
+      "insight": "\u03c1 sweet spot shifted: 28.0 \u2192 36.9",
+      "surprise": true,
+      "params_after": {
+        "sigma": 10.0,
+        "rho": 30.684210526315788,
+        "beta": 2.6666666666666665,
+        "eps": 0.5,
+        "K": 1.0,
+        "N": 500
+      }
+    },
+    {
+      "iteration": 1,
+      "experiment": "kuramoto_sync",
+      "result": {
+        "order": 0.45471116819325236,
+        "K": 1.0,
+        "type": "kuramoto_sync"
+      },
+      "insight": "No sync at K=1.00 (order=0.4547)",
+      "surprise": false,
+      "params_after": {
+        "sigma": 10.0,
+        "rho": 30.684210526315788,
+        "beta": 2.6666666666666665,
+        "eps": 0.5,
+        "K": 1.0,
+        "N": 500
+      }
+    },
+    {
+      "iteration": 2,
+      "experiment": "soft_snap_sweep",
+      "result": {
+        "best_eps": 0.3242105263157895,
+        "best_output": 80.11734048682216,
+        "type": "soft_snap_sweep"
+      },
+      "insight": "\u03b5*=0.324 maximizes creative output=80.1173",
+      "surprise": false,
+      "params_after": {
+        "sigma": 10.0,
+        "rho": 30.684210526315788,
+        "beta": 2.6666666666666665,
+        "eps": 0.41210526315789475,
+        "K": 1.0,
+        "N": 500
+      }
+    },
+    {
+      "iteration": 3,
+      "experiment": "coupled_systems",
+      "result": {
+        "total_div": 18.17115991250715,
+        "correlation": 0.09136869946344917,
+        "K": 0.041210526315789475,
+        "type": "coupled_systems"
+      },
+      "insight": "Coupling K=0.041: total_div=18.1712, corr=0.0914",
+      "surprise": false,
+      "params_after": {
+        "sigma": 10.0,
+        "rho": 30.684210526315788,
+        "beta": 2.6666666666666665,
+        "eps": 0.41210526315789475,
+        "K": 1.0,
+        "N": 500
+      }
+    },
+    {
+      "iteration": 4,
+      "experiment": "noise_injection",
+      "result": {
+        "best_noise": 0.001,
+        "best_div": 8.864138753115698,
+        "type": "noise_injection"
+      },
+      "insight": "Optimal noise=0.001, diversity=8.8641",
+      "surprise": false,
+      "params_after": {
+        "sigma": 10.0,
+        "rho": 30.684210526315788,
+        "beta": 2.6666666666666665,
+        "eps": 0.41210526315789475,
+        "K": 1.0,
+        "N": 500
+      }
+    },
+    {
+      "iteration": 5,
+      "experiment": "evolutionary",
+      "result": {
+        "best_rho": 45.892727019117594,
+        "best_sigma": 5.525736023448409,
+        "best_fitness": 17.470475731110707,
+        "type": "evolutionary"
+      },
+      "insight": "Evolved: \u03c1=45.9, \u03c3=5.5, fitness=17.4705",
+      "surprise": false,
+      "params_after": {
+        "sigma": 7.762868011724205,
+        "rho": 38.28846877271669,
+        "beta": 2.6666666666666665,
+        "eps": 0.41210526315789475,
+        "K": 1.0,
+        "N": 500
+      }
+    },
+    {
+      "iteration": 6,
+      "experiment": "lorenz_sweep",
+      "result": {
+        "best_rho": 41.97267929903248,
+        "best_div": 12.421399719082501,
+        "type": "lorenz_sweep"
+      },
+      "insight": "\u03c1 stable around 42.0, diversity=12.4214",
+      "surprise": false,
+      "params_after": {
+        "sigma": 7.762868011724205,
+        "rho": 39.39373193061142,
+        "beta": 2.6666666666666665,
+        "eps": 0.41210526315789475,
+        "K": 1.0,
+        "N": 500
+      }
+    },
+    {
+      "iteration": 7,
+      "experiment": "kuramoto_sync",
+      "result": {
+        "order": 0.7379062489994241,
+        "K": 1.0,
+        "type": "kuramoto_sync"
+      },
+      "insight": "Partial sync at K=1.00 (order=0.7379)",
+      "surprise": false,
+      "params_after": {
+        "sigma": 7.762868011724205,
+        "rho": 39.39373193061142,
+        "beta": 2.6666666666666665,
+        "eps": 0.41210526315789475,
+        "K": 1.0,
+        "N": 500
+      }
+    },
+    {
+      "iteration": 8,
+      "experiment": "soft_snap_sweep",
+      "result": {
+        "best_eps": 1.5810526315789473,
+        "best_output": 84.00580991022187,
+        "type": "soft_snap_sweep"
+      },
+      "insight": "\u03b5*=1.581 maximizes creative output=84.0058",
+      "surprise": false,
+      "params_after": {
+        "sigma": 7.762868011724205,
+        "rho": 39.39373193061142,
+        "beta": 2.6666666666666665,
+        "eps": 0.996578947368421,
+        "K": 1.0,
+        "N": 500
+      }
+    },
+    {
+      "iteration": 9,
+      "experiment": "coupled_systems",
+      "result": {
+        "total_div": 24.197065650662452,
+        "correlation": 0.0662181500761781,
+        "K": 0.09965789473684211,
+        "type": "coupled_systems"
+      },
+      "insight": "Coupling K=0.100: total_div=24.1971, corr=0.0662",
+      "surprise": false,
+      "params_after": {
+        "sigma": 7.762868011724205,
+        "rho": 39.39373193061142,
+        "beta": 2.6666666666666665,
+        "eps": 0.9965789473684211,
+        "K": 1.0,
+        "N": 500
+      }
+    },
+    {
+      "iteration": 10,
+      "experiment": "noise_injection",
+      "result": {
+        "best_noise": 0.001,
+        "best_div": 9.89786953804565,
+        "type": "noise_injection"
+      },
+      "insight": "Optimal noise=0.001, diversity=9.8979",
+      "surprise": false,
+      "params_after": {
+        "sigma": 7.762868011724205,
+        "rho": 39.39373193061142,
+        "beta": 2.6666666666666665,
+        "eps": 0.9965789473684211,
+        "K": 1.0,
+        "N": 500
+      }
+    },
+    {
+      "iteration": 11,
+      "experiment": "evolutionary",
+      "result": {
+        "best_rho": 45.086467033710115,
+        "best_sigma": 7.7454756970524485,
+        "best_fitness": 18.085669380288984,
+        "type": "evolutionary"
+      },
+      "insight": "Evolved: \u03c1=45.1, \u03c3=7.7, fitness=18.0857",
+      "surprise": false,
+      "params_after": {
+        "sigma": 7.754171854388327,
+        "rho": 42.24009948216077,
+        "beta": 2.6666666666666665,
+        "eps": 0.9965789473684211,
+        "K": 1.0,
+        "N": 500
+      }
+    },
+    {
+      "iteration": 12,
+      "experiment": "lorenz_sweep",
+      "result": {
+        "best_rho": 49.08220474531866,
+        "best_div": 14.147276461830714,
+        "type": "lorenz_sweep"
+      },
+      "insight": "\u03c1 sweet spot shifted: 42.2 \u2192 49.1",
+      "surprise": true,
+      "params_after": {
+        "sigma": 7.754171854388327,
+        "rho": 44.29273106110814,
+        "beta": 2.6666666666666665,
+        "eps": 0.9965789473684211,
+        "K": 1.0,
+        "N": 500
+      }
+    },
+    {
+      "iteration": 13,
+      "experiment": "kuramoto_sync",
+      "result": {
+        "order": 0.7204817559575623,
+        "K": 1.0,
+        "type": "kuramoto_sync"
+      },
+      "insight": "Partial sync at K=1.00 (order=0.7205)",
+      "surprise": false,
+      "params_after": {
+        "sigma": 7.754171854388327,
+        "rho": 44.29273106110814,
+        "beta": 2.6666666666666665,
+        "eps": 0.9965789473684211,
+        "K": 1.0,
+        "N": 500
+      }
+    },
+    {
+      "iteration": 14,
+      "experiment": "soft_snap_sweep",
+      "result": {
+        "best_eps": 0.7431578947368421,
+        "best_output": 78.80846399843657,
+        "type": "soft_snap_sweep"
+      },
+      "insight": "\u03b5*=0.743 maximizes creative output=78.8085",
+      "surprise": false,
+      "params_after": {
+        "sigma": 7.754171854388327,
+        "rho": 44.29273106110814,
+        "beta": 2.6666666666666665,
+        "eps": 0.8698684210526316,
+        "K": 1.0,
+        "N": 500
+      }
+    },
+    {
+      "iteration": 15,
+      "experiment": "coupled_systems",
+      "result": {
+        "total_div": 17.878715446906618,
+        "correlation": 0.05953399681015193,
+        "K": 0.08698684210526317,
+        "type": "coupled_systems"
+      },
+      "insight": "Coupling K=0.087: total_div=17.8787, corr=0.0595",
+      "surprise": false,
+      "params_after": {
+        "sigma": 7.754171854388327,
+        "rho": 44.29273106110814,
+        "beta": 2.6666666666666665,
+        "eps": 0.8698684210526316,
+        "K": 1.0,
+        "N": 500
+      }
+    },
+    {
+      "iteration": 16,
+      "experiment": "noise_injection",
+      "result": {
+        "best_noise": 0.1,
+        "best_div": 11.13272553910415,
+        "type": "noise_injection"
+      },
+      "insight": "Optimal noise=0.100, diversity=11.1327",
+      "surprise": false,
+      "params_after": {
+        "sigma": 7.754171854388327,
+        "rho": 44.29273106110814,
+        "beta": 2.6666666666666665,
+        "eps": 0.8698684210526316,
+        "K": 1.0,
+        "N": 500
+      }
+    },
+    {
+      "iteration": 17,
+      "experiment": "evolutionary",
+      "result": {
+        "best_rho": 46.759013672458366,
+        "best_sigma": 6.384450790740201,
+        "best_fitness": 17.65470337717663,
+        "type": "evolutionary"
+      },
+      "insight": "Evolved: \u03c1=46.8, \u03c3=6.4, fitness=17.6547",
+      "surprise": false,
+      "params_after": {
+        "sigma": 7.069311322564264,
+        "rho": 45.525872366783254,
+        "beta": 2.6666666666666665,
+        "eps": 0.8698684210526316,
+        "K": 1.0,
+        "N": 500
+      }
+    },
+    {
+      "iteration": 18,
+      "experiment": "lorenz_sweep",
+      "result": {
+        "best_rho": 50.26271447204641,
+        "best_div": 16.818579360121365,
+        "type": "lorenz_sweep"
+      },
+      "insight": "\u03c1 stable around 50.3, diversity=16.8186",
+      "surprise": false,
+      "params_after": {
+        "sigma": 7.069311322564264,
+        "rho": 46.9469249983622,
+        "beta": 2.6666666666666665,
+        "eps": 0.8698684210526316,
+        "K": 1.0,
+        "N": 500
+      }
+    },
+    {
+      "iteration": 19,
+      "experiment": "kuramoto_sync",
+      "result": {
+        "order": 0.7290477009328027,
+        "K": 1.0,
+        "type": "kuramoto_sync"
+      },
+      "insight": "Partial sync at K=1.00 (order=0.7290)",
+      "surprise": false,
+      "params_after": {
+        "sigma": 7.069311322564264,
+        "rho": 46.9469249983622,
+        "beta": 2.6666666666666665,
+        "eps": 0.8698684210526316,
+        "K": 1.0,
+        "N": 500
+      }
+    }
+  ],
+  "surprises": [
+    {
+      "iteration": 0,
+      "insight": "\u03c1 sweet spot shifted: 28.0 \u2192 36.9"
+    },
+    {
+      "iteration": 12,
+      "insight": "\u03c1 sweet spot shifted: 42.2 \u2192 49.1"
+    }
+  ],
+  "final_params": {
+    "sigma": 7.069311322564264,
+    "rho": 46.9469249983622,
+    "beta": 2.6666666666666665,
+    "eps": 0.8698684210526316,
+    "K": 1.0,
+    "N": 500
+  }
+}
