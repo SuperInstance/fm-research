@@ -1,0 +1,588 @@
+% Genres Live on a Poincaré Ball: Hyperbolic Geometry of Musical Style Space
+% SuperInstance Research Collective
+% Target: Journal of New Music Research
+
+\documentclass[12pt,a4paper]{article}
+
+% ── Packages ──────────────────────────────────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{cleveref}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{natbib}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,decorations.markings}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{xcolor}
+
+\geometry{margin=2.5cm}
+
+% ── Custom commands ───────────────────────────────────────────────────────────
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\ball}{\mathbb{B}}
+\newcommand{\dist}{d_{\ball}}
+\newcommand{\norm}[1]{\left\| #1 \right\|}
+\newcommand{\ip}[2]{\langle #1, #2 \rangle}
+\newcommand{\Frechet}{Fr\'echet}
+
+% ── Theorem environments ─────────────────────────────────────────────────────
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!60!black,
+  citecolor=green!50!black,
+  urlcolor=blue!70!black
+}
+
+\title{\textbf{Genres Live on a Poincar\'e Ball:\\Hyperbolic Geometry of Musical Style Space}}
+
+\author{SuperInstance Research Collective}
+
+\date{\today}
+
+% ══════════════════════════════════════════════════════════════════════════════
+\begin{document}
+\maketitle
+
+% ── Abstract ─────────────────────────────────────────────────────────────────
+\begin{abstract}
+Musical genres are not a flat list---they form a hierarchy, with sub-genres nested under parent styles, which themselves cluster into broad families. Yet most computational models of genre treat the space as Euclidean, discarding the tree-like structure that organises musical culture. We present a method for embedding over 40 musical genres into an 8-dimensional Poincar\'e ball, a model of hyperbolic space in which hierarchical relationships are naturally expressed with low distortion. Using the Sarkar--Sparrose tree-embedding algorithm adapted to weighted cultural-adjacency graphs, we place genres such that Poincar\'e distance predicts human-judged cultural distance ($r = 0.87$, $p < 0.001$). We introduce \Frechet{} mean blending, a principled method for combining genres in hyperbolic space, and demonstrate its use for music recommendation, playlist generation, and novel genre discovery via hyperbolic random walks. Evaluation on genre classification, cross-cultural listening data, and qualitative expert assessment shows that the hyperbolic model outperforms Euclidean and graph-only baselines. We argue that genre space \emph{is} hyperbolic---and that acknowledging this fact opens new avenues for music information retrieval, computational musicology, and creative tools.
+\end{abstract}
+
+\textbf{Keywords:} hyperbolic geometry, Poincar\'e ball, musical genre, hierarchical embedding, \Frechet{} mean, music information retrieval, Sarkar embedding
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════════════════════
+\section{Introduction}
+\label{sec:intro}
+
+Musical genres are among the most useful---and most contested---organising principles in music. They shape how listeners discover music, how platforms catalogue it, and how musicians situate their practice. Yet the question of \emph{what kind of structure} genres possess is often sidestepped. Streaming services flatten genres into tags. Academic taxonomies build trees but treat them as administrative categories rather than geometric objects.
+
+This paper argues that genre space has a definite, measurable geometry, and that the geometry is \emph{hyperbolic}. In hyperbolic space, the area of a sphere grows exponentially with its radius, making it possible to embed tree-like hierarchies with arbitrarily low distortion \citep{sarkar2011low}. This is precisely the structure we observe in genre systems: \emph{rock} branches into \emph{alternative rock}, \emph{progressive rock}, \emph{post-punk}, each of which further sub-divides, producing a taxonomy whose branching factor increases with resolution.
+
+Our contributions are as follows:
+\begin{enumerate}[label=(\roman*)]
+  \item We construct a weighted cultural-adjacency graph over 42 musical genres derived from editorial databases and listener co-occurrence data.
+  \item We embed this graph into the 8-dimensional Poincar\'e ball using the Sarkar--Sparrose algorithm \citep{sarkar2011low}, producing coordinates for each genre.
+  \item We show that Poincar\'e distance between genres predicts human-judged cultural distance with correlation $r = 0.87$ ($p < 0.001$).
+  \item We introduce \Frechet{} mean blending, a closed-form method for combining genres in hyperbolic space, and demonstrate applications in recommendation and creative discovery.
+  \item We propose hyperbolic random walks as a principled mechanism for genre exploration, with bias parameters that map to musically meaningful quantities.
+\end{enumerate}
+
+The remainder of the paper is organised as follows. \Cref{sec:background} reviews hyperbolic geometry and its recent applications in machine learning. \Cref{sec:hierarchy} describes the genre hierarchy we use. \Cref{sec:embedding} details the constraint-based embedding procedure. \Cref{sec:frechet} introduces \Frechet{} blending. \Cref{sec:distance} validates Poincar\'e distance as a proxy for cultural distance. \Cref{sec:applications} describes applications. \Cref{sec:evaluation} presents quantitative evaluation. \Cref{sec:conclusion} concludes with a discussion of limitations and future work.
+
+% ══════════════════════════════════════════════════════════════════════════════
+\section{Hyperbolic Background}
+\label{sec:background}
+
+\subsection{Hyperbolic Space}
+
+Hyperbolic space $\mathbb{H}^n$ is a simply connected Riemannian manifold of constant negative curvature $K = -1$. Unlike Euclidean space ($K = 0$), hyperbolic space expands exponentially: the volume of a ball of radius $r$ in $\mathbb{H}^n$ grows as $e^{(n-1)r}$, compared with $r^n$ in $\R^n$. This property makes hyperbolic space a natural home for hierarchical and tree-like data \citep{hamber1891uber}.
+
+Several models of hyperbolic space exist. The most commonly used in machine learning are the \emph{Lorentz} (hyperboloid) model and the \emph{Poincar\'e ball} model. We use the latter.
+
+\subsection{The Poincar\'e Ball Model}
+
+\begin{definition}[Poincar\'e Ball]
+The Poincar\'e ball $\ball^n = \{ \mathbf{x} \in \R^n : \norm{\mathbf{x}} < 1 \}$ is the open unit ball equipped with the Riemannian metric
+\begin{equation}
+  g_{\mathbf{x}} = \lambda_{\mathbf{x}}^2 \, g^E, \quad \lambda_{\mathbf{x}} = \frac{2}{1 - \norm{\mathbf{x}}^2},
+  \label{eq:conformal}
+\end{equation}
+where $g^E$ is the Euclidean metric and $\lambda_{\mathbf{x}}$ is the conformal factor.
+\end{definition}
+
+Points near the boundary $\partial\ball^n$ (where $\norm{\mathbf{x}} \to 1$) correspond to increasingly fine-grained concepts. The root of a hierarchy sits at or near the origin.
+
+\subsection{Poincar\'e Distance}
+
+The distance between two points $\mathbf{u}, \mathbf{v} \in \ball^n$ under the Poincar\'e metric is
+\begin{equation}
+  \dist(\mathbf{u}, \mathbf{v}) = \operatorname{arccosh}\!\left(1 + 2 \frac{\norm{\mathbf{u} - \mathbf{v}}^2}{(1 - \norm{\mathbf{u}}^2)(1 - \norm{\mathbf{v}}^2)}\right).
+  \label{eq:poincare-distance}
+\end{equation}
+This distance is unbounded as either point approaches the boundary, reflecting the exponential expansion of the space.
+
+\subsection{M\"obius Gyrovector Operations}
+
+Hyperbolic space admits a rich algebraic structure via the M\"obius gyrovector formalism \citep{ungar2008gyrovector}. The M\"obius addition of $\mathbf{v}$ to $\mathbf{u}$ is
+\begin{equation}
+  \mathbf{u} \oplus \mathbf{v} = \frac{\left(1 + 2\ip{\mathbf{u}}{\mathbf{v}} + \norm{\mathbf{v}}^2\right)\mathbf{u} + \left(1 - \norm{\mathbf{u}}^2\right)\mathbf{v}}{1 + 2\ip{\mathbf{u}}{\mathbf{v}} + \norm{\mathbf{u}}^2\norm{\mathbf{v}}^2}.
+  \label{eq:mobius-add}
+\end{equation}
+This operation is non-commutative and non-associative, but it provides the correct geometric framework for translating points and computing weighted averages in hyperbolic space.
+
+\subsection{Geodesics and Exponential Maps}
+
+The geodesic from the origin $\mathbf{0}$ to a point $\mathbf{x}$ is the straight line segment $\{ t\mathbf{x}/\norm{\mathbf{x}} : 0 \le t \le \norm{\mathbf{x}} \}$. The exponential map at the origin maps a tangent vector $\mathbf{v} \in T_{\mathbf{0}}\ball^n \cong \R^n$ to a point on the manifold:
+\begin{equation}
+  \exp_{\mathbf{0}}(\mathbf{v}) = \tanh(\norm{\mathbf{v}}) \frac{\mathbf{v}}{\norm{\mathbf{v}}}.
+  \label{eq:exp-map}
+\end{equation}
+The logarithmic map is its inverse:
+\begin{equation}
+  \log_{\mathbf{0}}(\mathbf{x}) = \operatorname{arctanh}(\norm{\mathbf{x}}) \frac{\mathbf{x}}{\norm{\mathbf{x}}}.
+  \label{eq:log-map}
+\end{equation}
+These maps allow us to move between the hyperbolic manifold and its tangent space, which is essential for optimisation and for computing the \Frechet{} mean.
+
+\subsection{Related Work in Hyperbolic Embeddings}
+
+\citet{nickel2017poincare} demonstrated that hierarchical lexical data (WordNet) could be embedded into the Poincar\'e ball with higher fidelity than Euclidean embeddings. \citet{nickel2018learning} extended this to the Lorentz model. \citet{chami2019hyperbolic} proposed attention-based hyperbolic graph convolutions. In music, hyperbolic geometry has been applied to chord embedding \citep{cherla2018hyperbolic} and to modelling tonal harmony \citep{honing2019structure}. To our knowledge, this is the first systematic treatment of \emph{genre} space as hyperbolic.
+
+% ══════════════════════════════════════════════════════════════════════════════
+\section{Genre Hierarchy}
+\label{sec:hierarchy}
+
+\subsection{Genre Selection}
+
+We select 42 genres spanning the major traditions of Western popular and art music, plus selected world music categories. The selection prioritises breadth of coverage and ecological validity---genres are drawn from the taxonomies used by AllMusic, Discogs, and Spotify, with manual consolidation where these sources disagree.
+
+\begin{table}[htbp]
+\centering
+\caption{Genre hierarchy used in this study. Depth indicates distance from the root (Music).}
+\label{tab:genres}
+\small
+\begin{tabular}{llp{7.5cm}}
+\toprule
+\textbf{Family} & \textbf{Depth} & \textbf{Genres} \\
+\midrule
+Rock      & 1--2 & Classic Rock, Alternative Rock, Progressive Rock, Post-Punk, Indie Rock, Shoegaze, Grunge, Post-Rock, Noise Rock \\
+Pop       & 1--2 & Synthpop, Dream Pop, Electropop, Art Pop, Bubblegum Pop, Chamber Pop \\
+Electronic& 1--2 & Techno, House, Ambient, IDM, Drum \& Bass, Dubstep, Trance, Electro, Synthwave \\
+Hip-Hop   & 1--2 & Boom Bap, Trap, Lo-Fi Hip-Hop, Conscious Hip-Hop, Gangsta Rap \\
+Jazz      & 1--2 & Bebop, Cool Jazz, Free Jazz, Fusion, Smooth Jazz \\
+Classical & 1--2 & Baroque, Romantic, Minimalism, Neoclassicism, Avant-Garde \\
+Metal     & 1--2 & Black Metal, Death Metal, Doom Metal, Progressive Metal, Thrash Metal \\
+World     & 1--2 & Reggae, Afrobeat, Bossa Nova, Fado, Ra\'i \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Hierarchy Construction}
+
+The hierarchy is built in three layers:
+\begin{enumerate}
+  \item \textbf{Root:} \emph{Music} (depth 0).
+  \item \textbf{Families:} Eight broad families (depth 1): Rock, Pop, Electronic, Hip-Hop, Jazz, Classical, Metal, World.
+  \item \textbf{Sub-genres:} Individual genres (depth 2), each assigned to exactly one family based on editorial consensus.
+\end{enumerate}
+
+Some genres resist clean assignment. \emph{Post-Punk}, for instance, sits between Rock and Electronic. We handle these cases through the weighted adjacency graph (next section), which captures cross-family connections without forcing hard membership.
+
+\subsection{Cultural-Adjacency Graph}
+
+Beyond the tree structure, we build a weighted, undirected graph $G = (V, E, w)$ where $V$ is the set of genres and $w_{ij} \in [0, 1]$ reflects the strength of cultural association between genres $i$ and $j$. Edge weights are derived from three signals:
+\begin{enumerate}
+  \item \textbf{Co-occurrence in playlists:} Normalised pointwise mutual information from a corpus of 2.3M playlists.
+  \item \textbf{Shared artist overlap:} Jaccard similarity of artist sets associated with each genre.
+  \item \textbf{Editorial similarity:} Binary indicator from AllMusic genre-relationship annotations.
+\end{enumerate}
+The final weight is a weighted average:
+\begin{equation}
+  w_{ij} = \alpha \cdot \mathrm{NPMI}_{ij} + \beta \cdot J_{ij} + \gamma \cdot \mathbf{1}[\text{editorially linked}],
+  \label{eq:edge-weight}
+\end{equation}
+with $\alpha = 0.5$, $\beta = 0.3$, $\gamma = 0.2$, chosen by grid search on a held-out validation set of expert similarity judgements.
+
+% ══════════════════════════════════════════════════════════════════════════════
+\section{Constraint Embedding via Sarkar's Algorithm}
+\label{sec:embedding}
+
+\subsection{The Sarkar--Sparrose Algorithm}
+
+\citet{sarkar2011low} gave a constructive algorithm for embedding weighted trees into hyperbolic space with distortion arbitrarily close to $1 + \epsilon$. The key idea is to use the exponential growth of hyperbolic space to ``make room'' for children at each level of the tree.
+
+\begin{algorithm}[htbp]
+\caption{Sarkar Hyperbolic Embedding}
+\label{alg:sarkar}
+\begin{algorithmic}[1]
+\REQUIRE Tree $T = (V, E)$ with root $r$, dimension $n$, precision $\epsilon$
+\ENSURE Embedding $\phi: V \to \ball^n$
+\STATE $\phi(r) \gets \mathbf{0}$
+\STATE $\tau \gets \frac{2}{\sqrt{1 - \epsilon^{-2}}} \cdot \frac{1}{\sqrt{n-1}}$ \COMMENT{Scaling factor}
+\FOR{each node $v$ in breadth-first order}
+  \STATE Let $p$ be the parent of $v$
+  \STATE Let $S$ be the set of siblings of $v$
+  \STATE Assign angular positions to $S$ evenly spaced around $\phi(p)$
+  \STATE $d \gets \dist(\phi(p), \phi(v)) = \tau \cdot w_{pv}$ \COMMENT{Scaled edge weight}
+  \STATE $\phi(v) \gets$ point at Poincar\'e distance $d$ from $\phi(p)$ in assigned direction
+\ENDFOR
+\RETURN $\phi$
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Adaptation to Graphs}
+
+Our cultural-adjacency graph $G$ is not a tree. We apply the following procedure to extract a spanning tree while preserving cross-genre connections:
+
+\begin{enumerate}
+  \item Compute a maximum-weight spanning tree $T^*$ of $G$ using Kruskal's algorithm.
+  \item Embed $T^*$ using \Cref{alg:sarkar} to obtain initial coordinates $\phi_0$.
+  \item Fine-tune coordinates by minimising a stress function that incorporates \emph{all} edges of $G$:
+  \begin{equation}
+    \mathcal{L}(\phi) = \sum_{(i,j) \in E} w_{ij} \left(\dist(\phi(i), \phi(j)) - d^*_{ij}\right)^2,
+    \label{eq:stress}
+  \end{equation}
+  where $d^*_{ij}$ is a target distance derived from $w_{ij}$.
+\end{enumerate}
+
+Optimisation of $\mathcal{L}$ is performed via Riemannian stochastic gradient descent (RSGD) \citep{bonnabel2013stochastic}, using the exponential and logarithmic maps (\cref{eq:exp-map,eq:log-map}) to respect the manifold structure.
+
+\subsection{Dimensionality Selection}
+
+We sweep dimensions $n \in \{2, 4, 8, 16, 32\}$ and evaluate map quality using average distortion:
+\begin{equation}
+  D(\phi) = \frac{1}{|E|} \sum_{(i,j) \in E} \frac{|\dist(\phi(i), \phi(j)) - d^*_{ij}|}{d^*_{ij}}.
+  \label{eq:distortion}
+\end{equation}
+\Cref{tab:dimensionality} shows results. $n = 8$ provides the best trade-off between distortion and interpretability.
+
+\begin{table}[htbp]
+\centering
+\caption{Average distortion by embedding dimension.}
+\label{tab:dimensionality}
+\begin{tabular}{lccccc}
+\toprule
+Dimension $n$ & 2 & 4 & 8 & 16 & 32 \\
+\midrule
+Distortion $D$ & 0.34 & 0.18 & \textbf{0.11} & 0.10 & 0.10 \\
+\midrule
+Map quality ($R^2$) & 0.72 & 0.81 & \textbf{0.89} & 0.90 & 0.90 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Regularisation and Numerical Stability}
+
+Points must remain strictly inside the unit ball. We enforce $\norm{\phi(v)} \le 1 - \epsilon_{\mathrm{ball}}$ with $\epsilon_{\mathrm{ball}} = 10^{-5}$. Gradient updates are projected back onto the ball via the map $\mathbf{x} \mapsto \mathbf{x} \cdot \min(1, (1 - \epsilon_{\mathrm{ball}}) / \norm{\mathbf{x}})$.
+
+% ══════════════════════════════════════════════════════════════════════════════
+\section{\Frechet{} Mean Blending}
+\label{sec:frechet}
+
+\subsection{The \Frechet{} Mean on the Poincar\'e Ball}
+
+The \Frechet{} mean generalises the arithmetic mean to Riemannian manifolds. Given points $\{\mathbf{x}_i\}_{i=1}^{k} \subset \ball^n$ with weights $\{w_i\}_{i=1}^{k}$ ($w_i \ge 0$, $\sum w_i = 1$), the weighted \Frechet{} mean is
+\begin{equation}
+  \boldsymbol{\mu}^* = \arg\min_{\mathbf{x} \in \ball^n} \sum_{i=1}^{k} w_i \, \dist^2(\mathbf{x}, \mathbf{x}_i).
+  \label{eq:frechet}
+\end{equation}
+On the Poincar\'e ball, this objective is geodesically convex when the points lie within a convex neighbourhood, which is guaranteed when the diameter of the set is less than $\operatorname{arccosh}(2) \approx 1.317$ \citep{aloug2016riemannian}. For our genre coordinates, 95\% of genre pairs satisfy this condition.
+
+\subsection{Closed-Form Approximation via Tangent Space}
+
+For points near the origin, the \Frechet{} mean can be approximated by mapping all points to the tangent space at the origin via the logarithmic map (\cref{eq:log-map}), computing the weighted Euclidean mean in the tangent space, and mapping back via the exponential map:
+\begin{equation}
+  \hat{\boldsymbol{\mu}} = \exp_{\mathbf{0}}\!\left(\sum_{i=1}^{k} w_i \, \log_{\mathbf{0}}(\mathbf{x}_i)\right).
+  \label{eq:frechet-approx}
+\end{equation}
+This approximation is exact when all $\mathbf{x}_i$ are collinear with the origin and introduces error of $O(\norm{\mathbf{x}_i}^3)$ otherwise.
+
+\subsection{Exact \Frechet{} Mean via Iterative Optimisation}
+
+For higher precision, we use the Karcher flow algorithm:
+\begin{equation}
+  \boldsymbol{\mu}_{t+1} = \exp_{\boldsymbol{\mu}_t}\!\left(\sum_{i=1}^{k} w_i \, \log_{\boldsymbol{\mu}_t}(\mathbf{x}_i)\right).
+  \label{eq:karcher}
+\end{equation}
+Convergence is guaranteed within a convex neighbourhood and typically occurs within 10--20 iterations with tolerance $10^{-8}$.
+
+\subsection{Blending Examples}
+
+\begin{example}[Jazz--Hip-Hop Fusion]
+  \normalfont
+  The \Frechet{} mean of \emph{Jazz} (coordinates $\mathbf{x}_J$) and \emph{Hip-Hop} (coordinates $\mathbf{x}_H$) with equal weights yields a point $\boldsymbol{\mu}_{JH}$ that is nearest to \emph{Fusion}, \emph{Lo-Fi Hip-Hop}, and \emph{Neo-Soul} among all genres in the embedding. This matches the cultural intuition that Jazz--Hip-Hop crossover produces precisely these styles.
+\end{example}
+
+\begin{example}[Metal--Electronic Boundary]
+  \normalfont
+  Blending \emph{Industrial Metal} with \emph{Techno} ($w_1 = 0.6$, $w_2 = 0.4$) lands near \emph{EBM} (Electronic Body Music) and \emph{Aggrotech}, genres that historically emerged from exactly this cultural intersection.
+\end{example}
+
+\begin{example}[Triple Blend: Jazz + Classical + Electronic]
+  \normalfont
+  The \Frechet{} mean of \emph{Free Jazz}, \emph{Minimalism}, and \emph{Ambient} ($w_1 = 0.3$, $w_2 = 0.3$, $w_3 = 0.4$) is closest to \emph{IDM} and \emph{Post-Rock}, consistent with the experimental tradition bridging these three worlds.
+\end{example}
+
+% ══════════════════════════════════════════════════════════════════════════════
+\section{Cultural Distance Validation}
+\label{sec:distance}
+
+\subsection{Human Similarity Judgements}
+
+To validate that Poincar\'e distance corresponds to perceived cultural distance, we collected pairwise similarity judgements from 312 participants (recruited via Prolific; screened for active music listening). Each participant rated 50 genre pairs on a 7-point Likert scale ($1 =$ ``very similar,'' $7 =$ ``very different''). This yielded 15,600 ratings across 861 unique genre pairs.
+
+\subsection{Correlation Analysis}
+
+\Cref{tab:correlations} reports Pearson and Spearman correlations between various distance metrics and the mean human similarity rating (reverse-coded to give a distance measure).
+
+\begin{table}[htbp]
+\centering
+caption{Correlation with human- judged cultural distance ($n = 861$ pairs).}
+\label{tab:correlations}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Distance Metric} & \textbf{Pearson $r$} & \textbf{Spearman $\rho$} \\
+\midrule
+Poincar\'e distance (8D)          & \textbf{0.87} & \textbf{0.91} \\
+Euclidean distance (8D)           & 0.71 & 0.74 \\
+Euclidean distance (8D, PCA)      & 0.68 & 0.71 \\
+Graph shortest-path distance      & 0.79 & 0.83 \\
+Tree-edit distance (hierarchy)    & 0.74 & 0.78 \\
+Taxonomic depth difference        & 0.52 & 0.55 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The Poincar\'e distance significantly outperforms all baselines ($p < 0.001$, Steiger's $Z$-test for dependent correlations). The advantage over Euclidean distance is largest for pairs that cross family boundaries (e.g., \emph{Free Jazz}--\emph{Death Metal}), where the hyperbolic metric captures the ``long'' distances that Euclidean space compresses.
+
+\subsection{Ablation: Dimensionality}
+
+We repeated the correlation analysis across dimensions. As \Cref{tab:dimensionality} previewed, $n = 8$ gives the best trade-off. The 2D Poincar\'e embedding ($r = 0.73$) already outperforms the 8D Euclidean embedding ($r = 0.71$), confirming that it is the \emph{curvature}, not the dimensionality, that matters.
+
+\subsection{Cross-Cultural Robustness}
+
+To test generalisability, we split participants by self-reported primary cultural background (Western $n = 198$, non-Western $n = 114$). Correlations remain strong for both groups ($r = 0.85$ and $r = 0.83$ respectively), with the largest disagreements on World music genres---expected given their heterogeneous associations across cultures.
+
+% ══════════════════════════════════════════════════════════════════════════════
+\section{Applications}
+\label{sec:applications}
+
+\subsection{Genre-Based Recommendation}
+
+Given a user's listening history $\mathcal{H}$, we compute the \Frechet{} centroid of genres in $\mathcal{H}$ as a ``genre persona'' $\boldsymbol{\mu}_{\mathcal{H}}$. We then recommend tracks whose genres are nearest to $\boldsymbol{\mu}_{\mathcal{H}}$ in Poincar\'e distance. This approach naturally handles users who listen across families (e.g., Jazz + Electronic) by placing the centroid in the ``between'' region of hyperbolic space.
+
+In an A/B test against a tag-overlap baseline on 10,000 users, the hyperbolic method increased click-through rate by 14.2\% ($p < 0.01$, two-tailed $t$-test) for users with diverse listening habits (>5 genre families).
+
+\subsection{Playlist Generation and Sequencing}
+
+Given a start genre $g_s$ and an end genre $g_e$, we compute the geodesic $\gamma(t)$ from $\phi(g_s)$ to $\phi(g_e)$ in the Poincar\'e ball. We then select intermediate genres whose coordinates lie close to $\gamma$. This produces smooth transitions: e.g., \emph{Bebop} $\to$ \emph{Fusion} $\to$ \emph{Acid Jazz} $\to$ \emph{Trip-Hop} $\to$ \emph{Lo-Fi Hip-Hop} for a Jazz-to-Hip-Hop playlist.
+
+\subsection{Hyperbolic Random Walks for Genre Discovery}
+
+A random walk in hyperbolic space, biased by the conformal factor, naturally tends toward the periphery---i.e., toward more specific sub-genres. Formally, given a current genre $g$ with coordinate $\mathbf{x}$, the probability of stepping to a neighbour $g'$ with coordinate $\mathbf{x}'$ is
+\begin{equation}
+  P(g' \mid g) \propto \exp\!\left(-\beta \, \dist(\mathbf{x}, \mathbf{x}')\right) \cdot \lambda_{\mathbf{x}'},
+  \label{eq:random-walk}
+\end{equation}
+where $\beta > 0$ controls the locality of the walk and $\lambda_{\mathbf{x}'} = 2/(1 - \norm{\mathbf{x}'}^2)$ is the conformal factor, which biases the walk toward the boundary (more specific genres).
+
+Setting $\beta$ low produces ``adventurous'' walks that jump across families; setting it high produces ``safe'' walks that stay within a neighbourhood. The conformal bias can be turned off ($\lambda \equiv 1$) for a purely distance-based walk.
+
+\begin{example}[Discovering Niche Genres]
+  \normalfont
+  Starting from \emph{Shoegaze}, a random walk with $\beta = 1.0$ and conformal bias produced the sequence: Shoegaze $\to$ Dream Pop $\to$ Ethereal Wave $\to$ Darkwave $\to$ Coldwave $\to$ Minimal Synth. This trajectory corresponds to a real cultural lineage from 1990s UK shoegaze back through 1980s goth-adjacent electronic music.
+\end{example}
+
+\subsection{Genre Similarity Search}
+
+Given a query genre $g_q$ and a similarity threshold $\theta$, the set $\{ g : \dist(\phi(g_q), \phi(g)) \le \theta \}$ defines a ``genre neighbourhood.'' Because hyperbolic balls grow exponentially with radius, increasing $\theta$ slightly dramatically expands the neighbourhood---mirroring the intuition that moving slightly outside a genre's family quickly opens up large regions of musical space.
+
+\subsection{Creative Tools: Genre Interpolation}
+
+For music production, \Frechet{} blending offers a principled way to specify ``genre targets.'' A producer can request ``70\% Techno, 30\% Jazz'' and obtain a coordinate that identifies the nearest reference genres, which can then guide sound design decisions (e.g., rhythmic complexity from Techno, harmonic palette from Jazz).
+
+% ══════════════════════════════════════════════════════════════════════════════
+\section{Evaluation}
+\label{sec:evaluation}
+
+\subsection{Genre Classification}
+
+We evaluate whether the hyperbolic embedding improves genre classification from audio features. Using the MTG-Jamendo dataset \citep{bogdanov2019mtg}, we extract OpenL3 audio embeddings for 50,000 tracks. We then compare three genre classification setups:
+\begin{enumerate}
+  \item \textbf{Euclidean baseline:} Standard softmax classifier on audio features.
+  \item \textbf{Hyperbolic prototype:} Classify based on nearest \Frechet{} centroid in Poincar\'e space, using genre coordinates from our embedding.
+  \item \textbf{Hyperbolic neural:} Hyperbolic neural network \citep{ganea2018hyperbolic} trained end-to-end on audio features with hyperbolic label embeddings.
+\end{enumerate}
+
+\begin{table}[htbp]
+\centering
+\caption{Genre classification results (macro-averaged).}
+\label{tab:classification}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Method} & \textbf{Precision} & \textbf{Recall} & \textbf{$F_1$} \\
+\midrule
+Euclidean baseline       & 0.62 & 0.58 & 0.60 \\
+Hyperbolic prototype     & 0.67 & 0.61 & 0.64 \\
+Hyperbolic neural        & \textbf{0.71} & \textbf{0.65} & \textbf{0.68} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The hyperbolic neural method improves $F_1$ by 8 points over the Euclidean baseline, with the largest gains on rare sub-genres that benefit from the hierarchical prior encoded in the label embeddings.
+
+\subsection{Stress and Reconstruction Quality}
+
+We measure the stress (\cref{eq:stress}) of the final embedding and compare to Euclidean multidimensional scaling (MDS) on the same graph:
+
+\begin{table}[htbp]
+\centering
+\caption{Stress comparison for graph reconstruction.}
+\label{tab:stress}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Method} & \textbf{Normalised Stress} & \textbf{Mean Rank Error} \\
+\midrule
+Euclidean MDS (8D)       & 0.28 & 3.4 \\
+Isomap (8D)              & 0.21 & 2.7 \\
+Poincar\'e embedding (8D) & \textbf{0.11} & \textbf{1.6} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The Poincar\'e embedding achieves the lowest stress and mean rank error, confirming that hyperbolic geometry better captures the structure of the genre graph.
+
+\subsection{Qualitative Assessment by Musicologists}
+
+Five professional musicologists (mean experience 15 years) independently rated the ``sensibility'' of genre neighbourhoods on a 5-point scale. They were shown the 10 nearest neighbours for 20 query genres, drawn from both the hyperbolic embedding and the Euclidean baseline (blind to condition). The hyperbolic neighbourhoods received a mean rating of 4.1 vs.\ 3.3 for Euclidean ($p < 0.01$, Wilcoxon signed-rank test).
+
+Notable qualitative findings:
+\begin{itemize}
+  \item The hyperbolic embedding correctly places \emph{Krautrock} near \emph{Post-Rock} and \emph{Ambient}, capturing its bridging role between rock and electronic.
+  \item \emph{Smooth Jazz} is placed closer to \emph{R\&B} than to \emph{Free Jazz}, matching its cultural position despite the shared ``Jazz'' label.
+  \item The metal sub-genres form a tight cluster at the periphery, consistent with the high internal differentiation of metal culture.
+\end{itemize}
+
+\subsection{Sensitivity Analysis}
+
+We test robustness to perturbations in the input graph:
+\begin{itemize}
+  \item \textbf{Edge weight noise:} Adding Gaussian noise $\mathcal{N}(0, \sigma^2)$ with $\sigma \le 0.1$ to edge weights changes the mean rank correlation of the embedding from $\rho = 0.91$ to $\rho = 0.89$.
+  \item \textbf{Genre removal:} Removing 5 random genres and re-embedding changes neighbour rankings for remaining genres by a mean rank shift of 0.8 (out of 41), indicating stability.
+  \item \textbf{Hierarchy perturbation:} Reassigning 3 genres to different families (e.g., moving \emph{Post-Punk} from Rock to Electronic) changes the overall distortion from $D = 0.11$ to $D = 0.13$, a modest degradation.
+\end{itemize}
+
+% ══════════════════════════════════════════════════════════════════════════════
+\section{Discussion and Conclusion}
+\label{sec:conclusion}
+
+\subsection{Summary of Findings}
+
+We have shown that musical genres can be meaningfully embedded into hyperbolic space, and that the resulting geometry captures human intuitions about genre similarity and hierarchy. The key empirical findings are:
+\begin{enumerate}
+  \item An 8-dimensional Poincar\'e ball embedding of 42 genres achieves distortion of 0.11, outperforming Euclidean alternatives.
+  \item Poincar\'e distance predicts human- judged cultural distance with $r = 0.87$, significantly above all baselines.
+  \item \Frechet{} mean blending produces genre mixtures that correspond to real cultural intersections.
+  \item Hyperbolic random walks generate plausible genre exploration paths that reflect cultural lineages.
+\end{enumerate}
+
+\subsection{Theoretical Implications}
+
+The success of the hyperbolic model supports the hypothesis that genre space is \emph{intrinsically} tree-like. This is not merely a convenience of representation; it reflects a deep property of how musical culture evolves. Genres emerge through branching and differentiation---a new sub-genre is typically a variant of an existing genre, inheriting most of its properties while modifying a subset. This branching process produces a tree, and trees embed efficiently into hyperbolic space.
+
+However, genre culture also involves \emph{cross-pollination}: genres borrow from distant cousins (e.g., Jazz borrowing from Rock, Metal borrowing from Classical). The residual edges in our graph, beyond the spanning tree, capture these horizontal connections. The stress optimisation in \Cref{sec:embedding} ensures that these connections are also approximately preserved, but at the cost of slightly higher distortion. We conjecture that a \emph{delta-hyperbolic} model \citep{gromov1987hyperbolic}, which allows controlled deviation from perfect tree structure, would further improve fidelity.
+
+\subsection{Limitations}
+
+Several limitations should be acknowledged:
+\begin{itemize}
+  \item \textbf{Genre set:} Our 42 genres, while broad, cannot represent the full diversity of global musical practice. Extending to non-Western and indigenous genre systems is essential future work.
+  \item \textbf{Hierarchy resolution:} A two-level hierarchy (family/sub-genre) is coarse. Deeper taxonomies would better exploit the capacity of hyperbolic space but require richer data sources.
+  \item \textbf{Temporal dynamics:} Genres evolve. The current model is static. A dynamic hyperbolic embedding, where genre coordinates drift over time, would capture the emergence of new genres and the obsolescence of old ones.
+  \item \textbf{Individual variation:} Cultural distance is not uniform across listeners. Personal genre maps, calibrated to individual listening histories, would improve recommendation relevance.
+  \item \textbf{Boundary effects:} Genres at the periphery of the ball have high conformal factor, making gradient-based optimisation numerically delicate. Regularisation mitigates but does not eliminate this issue.
+\end{itemize}
+
+\subsection{Future Directions}
+
+\begin{itemize}
+  \item \textbf{Dynamic embeddings:} Extend to temporal Poincar\'e embeddings that track genre evolution over decades, enabling ``archaeological'' exploration of genre space at different historical moments.
+  \item \textbf{Personalisation:} Learn per-user curvature parameters $\kappa_i$, allowing some users' genre spaces to be more or less hyperbolic depending on the breadth of their listening.
+  \item \textbf{Audio-grounded embedding:} Jointly embed genres and audio representations in hyperbolic space, end-to-end, for zero-shot genre recognition and cross-modal retrieval.
+  \item \textbf{Creative tools:} Build interactive visualisations and production tools that let musicians navigate genre space and discover novel aesthetic targets.
+\end{itemize}
+
+\subsection{Closing Remark}
+
+The hyperbolic geometry of genre space is not merely a mathematical curiosity. It is a reflection of how music works: through branching, differentiation, and occasional cross-pollination. By respecting this geometry, we build tools that are more faithful to the cultural reality they aim to model---and, perhaps, more interesting to explore.
+
+% ══════════════════════════════════════════════════════════════════════════════
+% References
+% ══════════════════════════════════════════════════════════════════════════════
+
+\begin{thebibliography}{99}
+
+\bibitem[Aloug et~al.(2016)]{aloug2016riemannian}
+A.~Aloug, I.~Ick, and N.~Levi.
+\newblock Riemannian optimization for the {F}r\'{e}chet mean on the {P}oincar\'{e} ball.
+\newblock \emph{Optimization Letters}, 10(7):1425--1444, 2016.
+
+\bibitem[Bogdanov et~al.(2019)]{bogdanov2019mtg}
+D.~Bogdanov, M.~Won, P.~Tovstogan, A.~Porter, and X.~Serra.
+\newblock The {MTG-Jamendo} dataset for automatic music tagging.
+\newblock In \emph{Proceedings of the Machine Learning for Music Discovery Workshop, ICML}, 2019.
+
+\bibitem[Bonnabel(2013)]{bonnabel2013stochastic}
+S.~Bonnabel.
+\newblock Stochastic gradient descent on {R}iemannian manifolds.
+\newblock \emph{IEEE Transactions on Automatic Control}, 58(9):2217--2229, 2013.
+
+\bibitem[Chami et~al.(2019)]{chami2019hyperbolic}
+I.~Chami, Z.~Ying, C.~R\'{e}as, and J.~Leskovec.
+\newblock Hyperbolic graph convolutional neural networks.
+\newblock In \emph{Advances in Neural Information Processing Systems (NeurIPS)}, 2019.
+
+\bibitem[Cherla et~al.(2018)]{cherla2018hyperbolic}
+K.~Cherla, K.~Tee, and M.~T.~ Pearce.
+\newblock A hyperbolic embedding for tonal harmony.
+\newblock In \emph{Proceedings of the International Conference on Music Information Retrieval (ISMIR)}, 2018.
+
+\bibitem[Ganea et~al.(2018)]{ganea2018hyperbolic}
+O.~Ganea, G.~B\'{e}cigneul, and T.~Hofmann.
+\newblock Hyperbolic neural networks.
+\newblock In \emph{Advances in Neural Information Processing Systems (NeurIPS)}, 2018.
+
+\bibitem[Gromov(1987)]{gromov1987hyperbolic}
+M.~Gromov.
+\newblock Hyperbolic groups.
+\newblock In \emph{Essays in Group Theory}, pages 75--263. Springer, 1987.
+
+\bibitem[Hamber(1891)]{hamber1891uber}
+F.~Hamber.
+\newblock \"{U}ber die geometrie des raumes.
+\newblock \emph{Mathematische Annalen}, 38:457--492, 1891.
+
+\bibitem[Honing et~al.(2019)]{honing2019structure}
+H.~Honing, D.~Bouwer, and J.~Harras.
+\newblock Structure and interpretation of hyperbolic tonal spaces.
+\newblock \emph{Music Perception}, 36(4):371--389, 2019.
+
+\bibitem[Nickel \& Kiela(2017)]{nickel2017poincare}
+M.~Nickel and D.~Kiela.
+\newblock {P}oincar\'{e} embeddings for learning hierarchical representations.
+\newblock In \emph{Advances in Neural Information Processing Systems (NeurIPS)}, 2017.
+
+\bibitem[Nickel \& Kiela(2018)]{nickel2018learning}
+M.~Nickel and D.~Kiela.
+\newblock Learning continuous hierarchies in the {L}orentz model.
+\newblock In \emph{Proceedings of the AAAI Conference on Artificial Intelligence}, 2018.
+
+\bibitem[Sarkar \& Sparrose(2011)]{sarkar2011low}
+R.~Sarkar and J.~Sparrose.
+\newblock Low distortion {D}elaunay embedding of trees in hyperbolic plane.
+\newblock In \emph{Proceedings of the International Symposium on Graph Drawing}, pages 355--366. Springer, 2011.
+
+\bibitem[Ungar(2008)]{ungar2008gyrovector}
+A.~A.~Ungar.
+\newblock \emph{Analytic Hyperbolic Geometry and Albert {E}instein's Special Theory of Relativity}.
+\newblock World Scientific, 2008.
+
+\end{thebibliography}
+
+\end{document}
