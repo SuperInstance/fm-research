@@ -1,0 +1,10 @@
+{
+  "exp": "166-170",
+  "theorem_proposed": true,
+  "cliff_results": {
+    "Lorenz": 0.02132083205934522,
+    "Rossler": 0.06950550367579895,
+    "Logistic": 0.0,
+    "Henon": 0.024897685796005757
+  }
+}
