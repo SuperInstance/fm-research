@@ -138,7 +138,7 @@ import subprocess
 with open('/tmp/fm-research/CODE/EXPERIMENT-10K-SWEEP.json', 'w') as f:
     json.dump({
         'n_systems': N_SYSTEMS,
-        'regime_counts': regime_counts,
+        'regime_counts': {k: int(v) for k, v in regime_counts.items()},
         'top10': [{'rho': float(rho_grid[i]), 'sigma': float(sigma_grid[i]),
                     'shape_q': float(shape_quality[i]), 'std': float(stds[i]),
                     'regime': str(regime[i])} for i in top10],
