@@ -1,0 +1,41 @@
+{
+  "experiment_name": "harmonic_wave_pool",
+  "timestamp": "2026-05-23T22:22:33.710223",
+  "runtime_seconds": 199.92740488052368,
+  "grid_size": 64,
+  "n_agents": 4096,
+  "n_steps": 80000,
+  "dt": 0.0125,
+  "epsilon": 0.08,
+  "parameters": {
+    "sigma": 10.0,
+    "beta": 2.6666666666666665,
+    "rho_range": [
+      12.0,
+      32.0
+    ]
+  },
+  "musical_mapping": {
+    "target_tonality_pc": 10.0,
+    "projection": "azimuthal_angle_plus_z_modulation",
+    "coupling": "circle_of_fifths_consonance_weighted"
+  },
+  "emergent_properties": {
+    "domain_walls_first_half": 2420.9725,
+    "domain_walls_second_half": 2294.6175,
+    "domain_walls_change": -126.35500000000002,
+    "tonality_first_half": 0.7165594276790742,
+    "tonality_second_half": 0.717261956078371,
+    "tonality_gain": 0.0007025283992967424,
+    "sync_first_half": 0.021839913054864154,
+    "sync_second_half": 0.006607333986466984,
+    "sync_change": -0.01523257906839717,
+    "z_pulse_mean": 19.930489872620193,
+    "z_pulse_cv": 0.19589134019696688,
+    "spatial_corr_lag1_mean": 0.017846307733604277,
+    "correlation_length": 0,
+    "mean_vorticity": 0.09664047568105161,
+    "max_vorticity": 0.9794288277626038,
+    "mean_structure_function": 33.71119643688202
+  }
+}
