@@ -1,0 +1,30 @@
+{
+  "boundaries": [
+    {
+      "rho": 20.700000000000017,
+      "from": "Deep Crystal",
+      "to": "Surface Crystal"
+    },
+    {
+      "rho": 23.50000000000002,
+      "from": "Surface Crystal",
+      "to": "Pendulum"
+    },
+    {
+      "rho": 23.90000000000002,
+      "from": "Pendulum",
+      "to": "Chimera"
+    },
+    {
+      "rho": 24.00000000000002,
+      "from": "Chimera",
+      "to": "Noisy Pendulum"
+    },
+    {
+      "rho": 24.10000000000002,
+      "from": "Noisy Pendulum",
+      "to": "Chimera"
+    }
+  ],
+  "pareto_evolution": true
+}
