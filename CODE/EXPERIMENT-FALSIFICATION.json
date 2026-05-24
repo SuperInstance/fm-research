@@ -1,1 +1,14 @@
-{"champion_quality": 0.001378992105626954}
+{
+  "experiment": 51,
+  "title": "Falsification Test — Try to Break 'Attractor Dominates' Theory",
+  "champion_quality": 0.001378992105626954,
+  "summary": {
+    "test1_weak_systems": "Coupling weak systems gives mixed results — slight benefit at very low K, hurt at higher K. No clear falsification.",
+    "test2_learning": "Coupling helps at very short runs (100 steps, +136%) but benefit vanishes or reverses at longer runs. Transient advantage only.",
+    "test3_anticorrelated": "Anti-correlated coupling (K<0) gives modest benefit. Positive coupling also helps. Noisy, inconsistent — hard to draw firm conclusions.",
+    "test4_exploration": "Coupling to a partner in a DIFFERENT regime then uncoupling shows some benefit, especially partner ρ=55 (+24%). Suggests coupling can seed exploration.",
+    "test5_network_vs_lone": "EVERY network configuration beat the lone ρ=47 champion. ρ=55 and ρ=60 single agents beat it too. The combined quality of mixed networks is highest."
+  },
+  "falsification_result": "PARTIALLY FALSIFIED",
+  "interpretation": "The ρ=47 attractor is NOT unbeatable. Higher ρ values (55, 60) produce higher quality. Networks CAN beat single agents. However, the quality metric may scale with variance (amplitude), which grows with ρ, so this may be a measurement artifact rather than genuine creative superiority."
+}
