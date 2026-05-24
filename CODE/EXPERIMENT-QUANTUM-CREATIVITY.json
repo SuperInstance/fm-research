@@ -1,0 +1,10 @@
+{
+  "tunneling": {
+    "chromatic_passing": 1.0,
+    "outside_note": 0.059105746561956225,
+    "key_change": 6.14421235332821e-06,
+    "genre_transformation": 5.203518136127939e-13,
+    "paradigm_shift": 1.4089358433184175e-37
+  },
+  "grover_speedup": 20.48
+}
