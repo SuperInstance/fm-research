@@ -1,0 +1,16 @@
+{
+  "tonality_first_half": 0.7185352744399573,
+  "tonality_second_half": 0.7182715456329866,
+  "tonality_gain": -0.0002637288069707866,
+  "dialogue_first_half": -0.7021639186425207,
+  "dialogue_second_half": -0.7265086389643938,
+  "dialogue_change": -0.02434472032187307,
+  "final_rho_near_ce15_fraction": 0.2138671875,
+  "final_rho_near_sf24_fraction": 0.35693359375,
+  "rho_flow_mean": 1.1488333940505981,
+  "rho_flow_std": 1.3406533002853394,
+  "n_phase_transitions": 50,
+  "max_consonance": 0.6014348850254796,
+  "mean_consonance": 0.5825802992339786,
+  "max_tonality": 0.7391419491751563
+}
