@@ -1,0 +1,10 @@
+{
+  "sweet_spot": 18.49999999999997,
+  "monoculture_confirmed": true,
+  "quality_variance_r": -0.5842124513010409,
+  "claims_audit": {
+    "confirmed": 11,
+    "falsified": 2,
+    "corrected": 5
+  }
+}

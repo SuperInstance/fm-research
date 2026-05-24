@@ -153,14 +153,19 @@ partial = sum(1 for _, s in claims if "PARTIAL" in s)
 
 for claim, status in claims:
     icon = {"CONFIRMED": "✓", "FALSIFIED": "✗", "CORRECTED": "↻", "PROPOSED": "?", "PARTIAL": "~"}
-    ic = next((v for k,v in icon.items() if k in status and k != "CONFIRMED" or (k=="CONFIRMED" and "CORRECTED" not in status)), "?")
+    if "FALSIFIED" in status: ic = "✗"
+    elif "CORRECTED" in status: ic = "↻"
+    elif "PARTIAL" in status: ic = "~"
+    elif "PROPOSED" in status: ic = "?"
+    elif "CONFIRMED" in status: ic = "✓"
+    else: ic = "?"
     print(f"  {ic} {claim[:50]:50s} → {status}")
 
 print(f"\n  Total: {confirmed} confirmed, {falsified} falsified, {corrected} corrected, {partial} partial, {proposed} proposed")
 print(f"  Survival rate: {confirmed}/{len(claims)} = {confirmed/len(claims)*100:.0f}%")
 
 with open('/tmp/fm-research/CODE/EXPERIMENT-191-195.json', 'w') as f:
-    json.dump({'sweet_spot': mus_peak['rho'], 'monoculture_confirmed': np.std(means) < 0.001,
+    json.dump({'sweet_spot': mus_peak['rho'], 'monoculture_confirmed': bool(np.std(means) < 0.001),
                'quality_variance_r': float(corr), 'claims_audit': {
                    'confirmed': confirmed, 'falsified': falsified, 'corrected': corrected}}, f, indent=2)
 subprocess.run(['git','add','-A'], cwd='/tmp/fm-research', capture_output=True)
