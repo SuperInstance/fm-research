@@ -1,0 +1,460 @@
+{
+  "results": [
+    {
+      "pitch_entropy": 0.4322063634326734,
+      "interval_entropy": 0.12537550486849774,
+      "consonance": 0.997997997997998,
+      "top_note": "F#",
+      "unique_pcs": 5,
+      "rho": 5,
+      "musicality": 0.46389218814934674
+    },
+    {
+      "pitch_entropy": 0.5660726056602279,
+      "interval_entropy": 0.21987717998039683,
+      "consonance": 0.995995995995996,
+      "top_note": "B",
+      "unique_pcs": 6,
+      "rho": 10,
+      "musicality": 0.5232514434546515
+    },
+    {
+      "pitch_entropy": 0.897399049660093,
+      "interval_entropy": 0.40225449004277825,
+      "consonance": 0.990990990990991,
+      "top_note": "B",
+      "unique_pcs": 6,
+      "rho": 15,
+      "musicality": 0.6522148798571753
+    },
+    {
+      "pitch_entropy": 1.3466090434917766,
+      "interval_entropy": 0.7409812491967374,
+      "consonance": 0.97997997997998,
+      "top_note": "B",
+      "unique_pcs": 6,
+      "rho": 20,
+      "musicality": 0.8574977636820525
+    },
+    {
+      "pitch_entropy": 1.518696975980331,
+      "interval_entropy": 0.8963093147394159,
+      "consonance": 0.970970970970971,
+      "top_note": "B",
+      "unique_pcs": 6,
+      "rho": 22,
+      "musicality": 0.9434436174396384
+    },
+    {
+      "pitch_entropy": 1.5350760614341543,
+      "interval_entropy": 0.6111966467954236,
+      "consonance": 1.0,
+      "top_note": "E",
+      "unique_pcs": 5,
+      "rho": 24,
+      "musicality": 0.857172106487306
+    },
+    {
+      "pitch_entropy": 1.5984849231965066,
+      "interval_entropy": 0.6720872478511095,
+      "consonance": 1.0,
+      "top_note": "C#",
+      "unique_pcs": 6,
+      "rho": 24.74,
+      "musicality": 0.891220213459028
+    },
+    {
+      "pitch_entropy": 1.6156123091097219,
+      "interval_entropy": 0.7121435929021027,
+      "consonance": 1.0,
+      "top_note": "E",
+      "unique_pcs": 6,
+      "rho": 25,
+      "musicality": 0.9086368738386357
+    },
+    {
+      "pitch_entropy": 1.645096680650078,
+      "interval_entropy": 0.7438942471726315,
+      "consonance": 1.0,
+      "top_note": "B",
+      "unique_pcs": 6,
+      "rho": 26,
+      "musicality": 0.9256655738955928
+    },
+    {
+      "pitch_entropy": 1.608242872211178,
+      "interval_entropy": 0.7243987943150547,
+      "consonance": 1.0,
+      "top_note": "C#",
+      "unique_pcs": 6,
+      "rho": 28,
+      "musicality": 0.9114105094400787
+    },
+    {
+      "pitch_entropy": 1.582134516843752,
+      "interval_entropy": 0.6877356344735885,
+      "consonance": 1.0,
+      "top_note": "C#",
+      "unique_pcs": 6,
+      "rho": 30,
+      "musicality": 0.8933554967826945
+    },
+    {
+      "pitch_entropy": 1.5975176117029213,
+      "interval_entropy": 0.7675812939819748,
+      "consonance": 1.0,
+      "top_note": "C#",
+      "unique_pcs": 6,
+      "rho": 35,
+      "musicality": 0.9242720232060032
+    },
+    {
+      "pitch_entropy": 1.5786494499667052,
+      "interval_entropy": 0.7858805996568362,
+      "consonance": 1.0,
+      "top_note": "C#",
+      "unique_pcs": 6,
+      "rho": 40,
+      "musicality": 0.9268201137275763
+    },
+    {
+      "pitch_entropy": 1.5198016238859329,
+      "interval_entropy": 0.7570426895219707,
+      "consonance": 0.996996996996997,
+      "top_note": "E",
+      "unique_pcs": 6,
+      "rho": 47,
+      "musicality": 0.9038548402475707
+    },
+    {
+      "pitch_entropy": 1.5363357291753914,
+      "interval_entropy": 0.8228162508580399,
+      "consonance": 0.998998998998999,
+      "top_note": "C#",
+      "unique_pcs": 6,
+      "rho": 55,
+      "musicality": 0.9307724907480429
+    },
+    {
+      "pitch_entropy": 1.5466536323682698,
+      "interval_entropy": 0.8760073601913073,
+      "consonance": 0.996996996996997,
+      "top_note": "E",
+      "unique_pcs": 6,
+      "rho": 60,
+      "musicality": 0.9507151461017482
+    },
+    {
+      "pitch_entropy": 1.5420056767520116,
+      "interval_entropy": 0.9573968929466201,
+      "consonance": 0.993993993993994,
+      "top_note": "E",
+      "unique_pcs": 6,
+      "rho": 80,
+      "musicality": 0.9771094579077931
+    }
+  ],
+  "best_rho": 80,
+  "melody": [
+    {
+      "note": 76,
+      "pc": 4,
+      "octave": 6,
+      "vel": 105
+    },
+    {
+      "note": 73,
+      "pc": 1,
+      "octave": 6,
+      "vel": 100
+    },
+    {
+      "note": 73,
+      "pc": 1,
+      "octave": 6,
+      "vel": 127
+    },
+    {
+      "note": 81,
+      "pc": 9,
+      "octave": 6,
+      "vel": 83
+    },
+    {
+      "note": 81,
+      "pc": 9,
+      "octave": 6,
+      "vel": 77
+    },
+    {
+      "note": 76,
+      "pc": 4,
+      "octave": 6,
+      "vel": 109
+    },
+    {
+      "note": 80,
+      "pc": 8,
+      "octave": 6,
+      "vel": 99
+    },
+    {
+      "note": 73,
+      "pc": 1,
+      "octave": 6,
+      "vel": 97
+    },
+    {
+      "note": 76,
+      "pc": 4,
+      "octave": 6,
+      "vel": 110
+    },
+    {
+      "note": 71,
+      "pc": 11,
+      "octave": 5,
+      "vel": 127
+    },
+    {
+      "note": 80,
+      "pc": 8,
+      "octave": 6,
+      "vel": 83
+    },
+    {
+      "note": 80,
+      "pc": 8,
+      "octave": 6,
+      "vel": 85
+    },
+    {
+      "note": 80,
+      "pc": 8,
+      "octave": 6,
+      "vel": 79
+    },
+    {
+      "note": 80,
+      "pc": 8,
+      "octave": 6,
+      "vel": 94
+    },
+    {
+      "note": 76,
+      "pc": 4,
+      "octave": 6,
+      "vel": 99
+    },
+    {
+      "note": 76,
+      "pc": 4,
+      "octave": 6,
+      "vel": 110
+    },
+    {
+      "note": 73,
+      "pc": 1,
+      "octave": 6,
+      "vel": 107
+    },
+    {
+      "note": 78,
+      "pc": 6,
+      "octave": 6,
+      "vel": 123
+    },
+    {
+      "note": 81,
+      "pc": 9,
+      "octave": 6,
+      "vel": 87
+    },
+    {
+      "note": 81,
+      "pc": 9,
+      "octave": 6,
+      "vel": 85
+    },
+    {
+      "note": 76,
+      "pc": 4,
+      "octave": 6,
+      "vel": 118
+    },
+    {
+      "note": 80,
+      "pc": 8,
+      "octave": 6,
+      "vel": 92
+    },
+    {
+      "note": 73,
+      "pc": 1,
+      "octave": 6,
+      "vel": 84
+    },
+    {
+      "note": 73,
+      "pc": 1,
+      "octave": 6,
+      "vel": 115
+    },
+    {
+      "note": 71,
+      "pc": 11,
+      "octave": 5,
+      "vel": 127
+    },
+    {
+      "note": 81,
+      "pc": 9,
+      "octave": 6,
+      "vel": 81
+    },
+    {
+      "note": 81,
+      "pc": 9,
+      "octave": 6,
+      "vel": 82
+    },
+    {
+      "note": 81,
+      "pc": 9,
+      "octave": 6,
+      "vel": 74
+    },
+    {
+      "note": 81,
+      "pc": 9,
+      "octave": 6,
+      "vel": 101
+    },
+    {
+      "note": 73,
+      "pc": 1,
+      "octave": 6,
+      "vel": 101
+    },
+    {
+      "note": 73,
+      "pc": 1,
+      "octave": 6,
+      "vel": 109
+    },
+    {
+      "note": 81,
+      "pc": 9,
+      "octave": 6,
+      "vel": 105
+    },
+    {
+      "note": 66,
+      "pc": 6,
+      "octave": 5,
+      "vel": 112
+    },
+    {
+      "note": 80,
+      "pc": 8,
+      "octave": 6,
+      "vel": 94
+    },
+    {
+      "note": 73,
+      "pc": 1,
+      "octave": 6,
+      "vel": 89
+    },
+    {
+      "note": 73,
+      "pc": 1,
+      "octave": 6,
+      "vel": 125
+    },
+    {
+      "note": 81,
+      "pc": 9,
+      "octave": 6,
+      "vel": 83
+    },
+    {
+      "note": 81,
+      "pc": 9,
+      "octave": 6,
+      "vel": 75
+    },
+    {
+      "note": 81,
+      "pc": 9,
+      "octave": 6,
+      "vel": 103
+    },
+    {
+      "note": 73,
+      "pc": 1,
+      "octave": 6,
+      "vel": 102
+    },
+    {
+      "note": 73,
+      "pc": 1,
+      "octave": 6,
+      "vel": 108
+    },
+    {
+      "note": 81,
+      "pc": 9,
+      "octave": 6,
+      "vel": 104
+    },
+    {
+      "note": 66,
+      "pc": 6,
+      "octave": 5,
+      "vel": 109
+    },
+    {
+      "note": 80,
+      "pc": 8,
+      "octave": 6,
+      "vel": 96
+    },
+    {
+      "note": 73,
+      "pc": 1,
+      "octave": 6,
+      "vel": 90
+    },
+    {
+      "note": 73,
+      "pc": 1,
+      "octave": 6,
+      "vel": 127
+    },
+    {
+      "note": 81,
+      "pc": 9,
+      "octave": 6,
+      "vel": 81
+    },
+    {
+      "note": 81,
+      "pc": 9,
+      "octave": 6,
+      "vel": 78
+    },
+    {
+      "note": 76,
+      "pc": 4,
+      "octave": 6,
+      "vel": 105
+    },
+    {
+      "note": 73,
+      "pc": 1,
+      "octave": 6,
+      "vel": 102
+    }
+  ]
+}
