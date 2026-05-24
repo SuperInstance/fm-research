@@ -1,0 +1,847 @@
+{
+  "melody_91": [
+    {
+      "note": 67,
+      "pc": 7,
+      "octave": 5,
+      "vel": 82,
+      "dur": 2,
+      "tick": 0
+    },
+    {
+      "note": 67,
+      "pc": 7,
+      "octave": 5,
+      "vel": 82,
+      "dur": 2,
+      "tick": 2
+    },
+    {
+      "note": 48,
+      "pc": 0,
+      "octave": 4,
+      "vel": 81,
+      "dur": 2,
+      "tick": 4
+    },
+    {
+      "note": 67,
+      "pc": 7,
+      "octave": 5,
+      "vel": 82,
+      "dur": 2,
+      "tick": 6
+    },
+    {
+      "note": 67,
+      "pc": 7,
+      "octave": 5,
+      "vel": 81,
+      "dur": 2,
+      "tick": 8
+    },
+    {
+      "note": 50,
+      "pc": 2,
+      "octave": 4,
+      "vel": 81,
+      "dur": 2,
+      "tick": 10
+    },
+    {
+      "note": 67,
+      "pc": 7,
+      "octave": 5,
+      "vel": 81,
+      "dur": 2,
+      "tick": 12
+    },
+    {
+      "note": 64,
+      "pc": 4,
+      "octave": 5,
+      "vel": 81,
+      "dur": 2,
+      "tick": 14
+    },
+    {
+      "note": 50,
+      "pc": 2,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 16
+    },
+    {
+      "note": 67,
+      "pc": 7,
+      "octave": 5,
+      "vel": 80,
+      "dur": 2,
+      "tick": 18
+    },
+    {
+      "note": 64,
+      "pc": 4,
+      "octave": 5,
+      "vel": 80,
+      "dur": 2,
+      "tick": 20
+    },
+    {
+      "note": 50,
+      "pc": 2,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 22
+    },
+    {
+      "note": 64,
+      "pc": 4,
+      "octave": 5,
+      "vel": 80,
+      "dur": 2,
+      "tick": 24
+    },
+    {
+      "note": 64,
+      "pc": 4,
+      "octave": 5,
+      "vel": 80,
+      "dur": 2,
+      "tick": 26
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 28
+    },
+    {
+      "note": 64,
+      "pc": 4,
+      "octave": 5,
+      "vel": 80,
+      "dur": 2,
+      "tick": 30
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 32
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 34
+    },
+    {
+      "note": 64,
+      "pc": 4,
+      "octave": 5,
+      "vel": 80,
+      "dur": 2,
+      "tick": 36
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 38
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 40
+    },
+    {
+      "note": 64,
+      "pc": 4,
+      "octave": 5,
+      "vel": 80,
+      "dur": 2,
+      "tick": 42
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 44
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 46
+    },
+    {
+      "note": 64,
+      "pc": 4,
+      "octave": 5,
+      "vel": 80,
+      "dur": 2,
+      "tick": 48
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 50
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 52
+    },
+    {
+      "note": 64,
+      "pc": 4,
+      "octave": 5,
+      "vel": 80,
+      "dur": 2,
+      "tick": 54
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 56
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 58
+    },
+    {
+      "note": 64,
+      "pc": 4,
+      "octave": 5,
+      "vel": 80,
+      "dur": 2,
+      "tick": 60
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 62
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 64
+    },
+    {
+      "note": 64,
+      "pc": 4,
+      "octave": 5,
+      "vel": 80,
+      "dur": 2,
+      "tick": 66
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 68
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 70
+    },
+    {
+      "note": 64,
+      "pc": 4,
+      "octave": 5,
+      "vel": 80,
+      "dur": 2,
+      "tick": 72
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 74
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 76
+    },
+    {
+      "note": 64,
+      "pc": 4,
+      "octave": 5,
+      "vel": 80,
+      "dur": 2,
+      "tick": 78
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 80
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 82
+    },
+    {
+      "note": 64,
+      "pc": 4,
+      "octave": 5,
+      "vel": 80,
+      "dur": 2,
+      "tick": 84
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 86
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 88
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 90
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 92
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 94
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 96
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 98
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 102
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 104
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 106
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 110
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 2,
+      "tick": 112
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 114
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 118
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 122
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 126
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 130
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 134
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 138
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 142
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 146
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 150
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 154
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 158
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 162
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 166
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 170
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 174
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 178
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 182
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 186
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 190
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 194
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 198
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 202
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 206
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 210
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 214
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 218
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 222
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 226
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 230
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 234
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 238
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 242
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 246
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 250
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 254
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 258
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 262
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 266
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 270
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 274
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 278
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 282
+    },
+    {
+      "note": 52,
+      "pc": 4,
+      "octave": 4,
+      "vel": 80,
+      "dur": 4,
+      "tick": 286
+    }
+  ],
+  "rho_musicalities": [
+    {
+      "rho": 15,
+      "ce": 0.19428105491595513,
+      "cons": 0.9819639278557114,
+      "mus": 0.19077698779322247
+    },
+    {
+      "rho": 18,
+      "ce": 0.23813444480591556,
+      "cons": 0.969939879759519,
+      "mus": 0.23097609476164954
+    },
+    {
+      "rho": 20,
+      "ce": 0.24727573513534648,
+      "cons": 0.9519038076152304,
+      "mus": 0.23538271380619152
+    },
+    {
+      "rho": 22,
+      "ce": 0.17292414448524046,
+      "cons": 0.9198396793587175,
+      "mus": 0.15906248961668412
+    },
+    {
+      "rho": 24,
+      "ce": 0.049016390788865966,
+      "cons": 0.9939879759519038,
+      "mus": 0.048721703068692425
+    },
+    {
+      "rho": 28,
+      "ce": 0.028596255935115066,
+      "cons": 0.9859719438877755,
+      "mus": 0.02819510605225774
+    },
+    {
+      "rho": 35,
+      "ce": 0.023021230168500863,
+      "cons": 0.9779559118236473,
+      "mus": 0.022513748140738317
+    },
+    {
+      "rho": 47,
+      "ce": 0.03130980642077355,
+      "cons": 0.9619238476953907,
+      "mus": 0.030117649462868344
+    }
+  ],
+  "transition_rho": 23.350000000000048
+}
