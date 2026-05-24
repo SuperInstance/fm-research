@@ -1,0 +1,270 @@
+[
+  {
+    "test": "pitches",
+    "value": 1,
+    "avg_score": 5.642899646263762
+  },
+  {
+    "test": "pitches",
+    "value": 2,
+    "avg_score": 5.668039646812291
+  },
+  {
+    "test": "pitches",
+    "value": 3,
+    "avg_score": 5.634296814476581
+  },
+  {
+    "test": "pitches",
+    "value": 4,
+    "avg_score": 5.668646885228723
+  },
+  {
+    "test": "pitches",
+    "value": 5,
+    "avg_score": 5.628588714933311
+  },
+  {
+    "test": "pitches",
+    "value": 7,
+    "avg_score": 5.382032112582314
+  },
+  {
+    "test": "pitches",
+    "value": 12,
+    "avg_score": 4.85779855861926
+  },
+  {
+    "test": "events",
+    "value": 4,
+    "avg_score": 6.767927563574436
+  },
+  {
+    "test": "events",
+    "value": 8,
+    "avg_score": 6.032882879502612
+  },
+  {
+    "test": "events",
+    "value": 16,
+    "avg_score": 5.528893334159179
+  },
+  {
+    "test": "events",
+    "value": 32,
+    "avg_score": 5.576626394080407
+  },
+  {
+    "test": "events",
+    "value": 64,
+    "avg_score": 5.620254529501458
+  },
+  {
+    "test": "events",
+    "value": 128,
+    "avg_score": 5.638653858247502
+  },
+  {
+    "test": "rho",
+    "value": 0.1,
+    "avg_score": 5.267527018405245
+  },
+  {
+    "test": "rho",
+    "value": 0.5,
+    "avg_score": 5.264950310547393
+  },
+  {
+    "test": "rho",
+    "value": 1,
+    "avg_score": 5.063770672876906
+  },
+  {
+    "test": "rho",
+    "value": 2,
+    "avg_score": 5.344134923901861
+  },
+  {
+    "test": "rho",
+    "value": 3,
+    "avg_score": 5.667375730382336
+  },
+  {
+    "test": "rho",
+    "value": 5,
+    "avg_score": 5.363848952591525
+  },
+  {
+    "test": "rho",
+    "value": 10,
+    "avg_score": 5.670329696822311
+  },
+  {
+    "test": "rho",
+    "value": 15,
+    "avg_score": 5.694732672598818
+  },
+  {
+    "test": "rho",
+    "value": 28,
+    "avg_score": 5.581027972484552
+  },
+  {
+    "test": "method",
+    "value": "random",
+    "avg_score": 7.821700329124337
+  },
+  {
+    "test": "method",
+    "value": "scale_constrained",
+    "avg_score": 8.262745934162623
+  },
+  {
+    "test": "method",
+    "value": "lorenz_constrained",
+    "avg_score": 5.576047316085383
+  },
+  {
+    "test": "method",
+    "value": "lorenz_scale",
+    "avg_score": 5.574592140888995
+  },
+  {
+    "test": "genre",
+    "value": "minimal_techno",
+    "avg_score": 5.6489199163742905,
+    "config": {
+      "rho": 20,
+      "sigma": 5,
+      "scale": [
+        0,
+        3,
+        7
+      ],
+      "n": 64
+    }
+  },
+  {
+    "test": "genre",
+    "value": "ambient",
+    "avg_score": 5.6102026986447076,
+    "config": {
+      "rho": 5,
+      "sigma": 3,
+      "scale": [
+        0,
+        2,
+        4,
+        7,
+        9
+      ],
+      "n": 32
+    }
+  },
+  {
+    "test": "genre",
+    "value": "death_metal",
+    "avg_score": 5.493165539714718,
+    "config": {
+      "rho": 50,
+      "sigma": 15,
+      "scale": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        7,
+        8,
+        10
+      ],
+      "n": 64
+    }
+  },
+  {
+    "test": "genre",
+    "value": "lullaby",
+    "avg_score": 5.080400339340331,
+    "config": {
+      "rho": 8,
+      "sigma": 5,
+      "scale": [
+        0,
+        2,
+        4,
+        7,
+        9
+      ],
+      "n": 16
+    }
+  },
+  {
+    "test": "genre",
+    "value": "military_march",
+    "avg_score": 5.6997912133797035,
+    "config": {
+      "rho": 15,
+      "sigma": 10,
+      "scale": [
+        0,
+        2,
+        4,
+        5,
+        7,
+        9,
+        11
+      ],
+      "n": 32
+    }
+  },
+  {
+    "test": "genre",
+    "value": "trap",
+    "avg_score": 5.74403716155468,
+    "config": {
+      "rho": 25,
+      "sigma": 8,
+      "scale": [
+        0,
+        3,
+        5,
+        7,
+        10
+      ],
+      "n": 64
+    }
+  },
+  {
+    "test": "genre",
+    "value": "baroque_fugue",
+    "avg_score": 5.5705630637053645,
+    "config": {
+      "rho": 12,
+      "sigma": 10,
+      "scale": [
+        0,
+        2,
+        4,
+        5,
+        7,
+        9,
+        11
+      ],
+      "n": 128
+    }
+  },
+  {
+    "test": "genre",
+    "value": "drone_doom",
+    "avg_score": 5.482838959496544,
+    "config": {
+      "rho": 2,
+      "sigma": 3,
+      "scale": [
+        0,
+        7
+      ],
+      "n": 16
+    }
+  }
+]
