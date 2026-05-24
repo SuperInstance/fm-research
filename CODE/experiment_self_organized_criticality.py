@@ -1,0 +1,214 @@
+import numpy as np
+import json
+
+print("=== Experiment 36: Self-Organized Criticality in Creative Systems ===\n")
+
+np.random.seed(42)
+
+# Part 1: Creative sandpile
+print("--- Part 1: Creative Sandpile ---")
+# Grid of creative agents. Each accumulates "creative energy"
+# When energy exceeds threshold, it "avalanches" to neighbors
+# Measure: avalanche size distribution (power law = criticality)
+
+grid_size = 50
+threshold = 4
+grid = np.random.randint(0, threshold, (grid_size, grid_size))
+
+avalanche_sizes = []
+
+for step in range(50000):
+    # Drop a grain (creative stimulus) at random location
+    x, y = np.random.randint(0, grid_size, 2)
+    grid[x, y] += 1
+    
+    # Avalanche
+    size = 0
+    unstable = [(x, y)]
+    
+    while unstable:
+        new_unstable = []
+        for ux, uy in unstable:
+            if grid[ux, uy] >= threshold:
+                grid[ux, uy] -= 4
+                size += 1
+                
+                # Distribute to neighbors
+                for dx, dy in [(-1,0), (1,0), (0,-1), (0,1)]:
+                    nx, ny = (ux + dx) % grid_size, (uy + dy) % grid_size
+                    grid[nx, ny] += 1
+                    if grid[nx, ny] >= threshold:
+                        new_unstable.append((nx, ny))
+        
+        unstable = list(set(new_unstable))
+    
+    if size > 0:
+        avalanche_sizes.append(size)
+
+# Check for power law
+if len(avalanche_sizes) > 100:
+    sizes = np.array(avalanche_sizes)
+    max_size = max(sizes)
+    
+    # Log-log histogram
+    bins = np.logspace(0, np.log10(max_size), 20)
+    hist, edges = np.histogram(sizes, bins=bins, density=True)
+    
+    # Fit power law in log-log space
+    valid = hist > 0
+    if np.sum(valid) > 3:
+        log_sizes = np.log(edges[:-1][valid] + 1)
+        log_hist = np.log(hist[valid])
+        
+        fit = np.polyfit(log_sizes, log_hist, 1)
+        exponent = fit[0]
+        
+        print(f"  Avalanche distribution exponent: {exponent:.3f}")
+        print(f"  (Power law = criticality. SOC models typically give -1.0 to -1.5)")
+        print(f"  Total avalanches: {len(avalanche_sizes)}")
+        print(f"  Max avalanche: {max_size}")
+        print(f"  Mean avalanche: {np.mean(sizes):.2f}")
+        print(f"  Median avalanche: {np.median(sizes):.2f}")
+        
+        # Check if it's actually power law
+        is_power_law = exponent < -0.5
+        print(f"  Power law: {'YES ✓' if is_power_law else 'NO'}")
+        print(f"  Self-organized criticality: {'CONFIRMED' if is_power_law else 'NOT CONFIRMED'}")
+
+# Part 2: Creative system as sandpile with ε
+print("\n--- Part 2: Creative Sandpile with ε ---")
+# Threshold = constraint strength, ε controls randomness
+
+for eps in [0.0, 0.1, 0.3, 0.5, 0.8, 1.0]:
+    grid = np.random.randint(0, threshold, (30, 30))
+    sizes = []
+    
+    for step in range(20000):
+        x, y = np.random.randint(0, 30, 2)
+        # ε controls: sometimes add extra, sometimes skip
+        if np.random.random() > eps * 0.3:
+            grid[x, y] += 1
+        
+        # Avalanche with noise
+        size = 0
+        unstable = [(x, y)] if grid[x, y] >= threshold else []
+        
+        for _ in range(100):  # limit iterations
+            new_unstable = []
+            for ux, uy in unstable:
+                if grid[ux, uy] >= threshold:
+                    grid[ux, uy] -= 4
+                    size += 1
+                    for dx, dy in [(-1,0), (1,0), (0,-1), (0,1)]:
+                        nx, ny = (ux + dx) % 30, (uy + dy) % 30
+                        # ε adds randomness to distribution
+                        grid[nx, ny] += 1 + int(np.random.random() < eps)
+                        if grid[nx, ny] >= threshold:
+                            new_unstable.append((nx, ny))
+            unstable = list(set(new_unstable))
+            if not unstable:
+                break
+        
+        if size > 0:
+            sizes.append(size)
+    
+    if len(sizes) > 10:
+        sizes = np.array(sizes)
+        # Quick power law check
+        bins = np.logspace(0, np.log10(max(sizes) + 1), 10)
+        hist, edges = np.histogram(sizes, bins=bins, density=True)
+        valid = hist > 0
+        if np.sum(valid) > 2:
+            fit = np.polyfit(np.log(edges[:-1][valid] + 1), np.log(hist[valid]), 1)
+            print(f"  ε={eps:.1f}: exponent={fit[0]:.3f}, mean_size={np.mean(sizes):.2f}, "
+                  f"n_avalanches={len(sizes)}")
+
+# Part 3: Does the Lorenz system self-tune to criticality?
+print("\n--- Part 3: Lorenz Self-Tuning ---")
+# If we let ρ evolve based on the system's own dynamics, where does it settle?
+
+N = 200
+dt = 0.01
+state = np.random.randn(N, 3) * 0.1
+rho = 15.0  # start in periodic regime
+
+rho_history = []
+diversity_history = []
+
+for step in range(50000):
+    x, y, z = state[:, 0], state[:, 1], state[:, 2]
+    
+    # Lorenz
+    dx = 10 * (y - x)
+    dy = x * (rho - z) - y
+    dz = x * y - 8/3 * z
+    state += np.column_stack([dx, dy, dz]) * dt
+    
+    if step > 5000 and step % 100 == 0:
+        div = float(np.std(state[:, 0]))
+        diversity_history.append(div)
+        
+        # Adapt ρ: if diversity is too low, increase ρ; if too high, decrease
+        target_div = 5.0  # desired creative output level
+        rho += 0.01 * (target_div - div)
+        rho = max(1, min(60, rho))
+        
+        rho_history.append(float(rho))
+    
+    if step % 10000 == 0 and step > 0:
+        print(f"  Step {step}: ρ={rho:.2f}, diversity={float(np.std(state[:, 0])):.4f}")
+
+if rho_history:
+    final_rho = rho_history[-1]
+    rho_std = float(np.std(rho_history[-100:]))
+    print(f"\n  ρ converged to: {final_rho:.2f} ± {rho_std:.2f}")
+    print(f"  This is {'near ρ_c=24.74 (critical point!)' if abs(final_rho - 24.74) < 5 else 'away from critical point'}")
+    print(f"  Self-tuning to criticality: {'YES' if abs(final_rho - 24.74) < 5 else 'NO, settled elsewhere'}")
+
+# Part 4: 1/f noise in creative output
+print("\n--- Part 4: 1/f Noise in Creative Output ---")
+# Critical systems produce 1/f (pink) noise
+
+state = np.random.randn(500, 3) * 0.1
+outputs = []
+
+for step in range(20000):
+    x, y, z = state[:, 0], state[:, 1], state[:, 2]
+    dx = 10 * (y - x)
+    dy = x * (28 - z) - y
+    dz = x * y - 8/3 * z
+    state += np.column_stack([dx, dy, dz]) * dt
+    outputs.append(float(np.mean(state[:, 0])))
+
+# Power spectral density
+outputs = np.array(outputs)
+f, psd = np.fft.rfftfreq(len(outputs), d=dt), np.abs(np.fft.rfft(outputs))**2
+
+# Fit slope in log-log (excluding DC and very high frequencies)
+valid = (f > 0.01) & (f < 10) & (psd > 0)
+if np.sum(valid) > 10:
+    log_f = np.log(f[valid])
+    log_psd = np.log(psd[valid])
+    fit = np.polyfit(log_f, log_psd, 1)
+    slope = fit[0]
+    
+    print(f"  PSD slope: {slope:.3f}")
+    print(f"  1/f noise (pink): slope ≈ -1")
+    print(f"  1/f² noise (brown): slope ≈ -2")
+    print(f"  White noise: slope ≈ 0")
+    
+    if -1.5 < slope < -0.5:
+        print(f"  → PINK NOISE (1/f): creative output shows SOC signature!")
+    elif slope < -1.5:
+        print(f"  → Brown noise: more structured than critical")
+    else:
+        print(f"  → White-ish noise: less structured than critical")
+
+with open('CODE/EXPERIMENT-SOC.json', 'w') as f:
+    json.dump({
+        'avalanche_exponent': float(exponent) if len(avalanche_sizes) > 100 else None,
+        'rho_convergence': float(rho_history[-1]) if rho_history else None,
+        'psd_slope': float(slope) if np.sum(valid) > 10 else None,
+    }, f, indent=2)
+
+print("\n=== SELF-ORGANIZED CRITICALITY IN CREATIVE SYSTEMS ===")

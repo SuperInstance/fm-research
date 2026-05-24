@@ -1,0 +1,165 @@
+{
+  "recovery_results": [
+    {
+      "label": "periodic low noise",
+      "actual": {
+        "sigma": 10,
+        "rho": 5,
+        "eps": 0.1
+      },
+      "estimated": {
+        "rho_est": 1.0000879238630165,
+        "eps_est": 0.0003872582208586654,
+        "sigma_est": 0.17053218878201437,
+        "lyapunov_est": 0.4909398068439072,
+        "regime": "FIXED-POINT",
+        "coherence": 0.9565928956948414,
+        "variance": 1.7584772603312107e-05
+      },
+      "rho_error_pct": 79.99824152273966,
+      "eps_error_pct": 90.55703798103758
+    },
+    {
+      "label": "periodic med noise",
+      "actual": {
+        "sigma": 10,
+        "rho": 15,
+        "eps": 0.1
+      },
+      "estimated": {
+        "rho_est": 1.047272989714417,
+        "eps_est": 0.0030076663265452613,
+        "sigma_est": 0.019129798890732408,
+        "lyapunov_est": 0.6113773149498217,
+        "regime": "FIXED-POINT",
+        "coherence": 0.9173659115599669,
+        "variance": 0.009454597942883402
+      },
+      "rho_error_pct": 93.01818006857056,
+      "eps_error_pct": 88.17484879404978
+    },
+    {
+      "label": "chaotic low noise",
+      "actual": {
+        "sigma": 10,
+        "rho": 28,
+        "eps": 0.1
+      },
+      "estimated": {
+        "rho_est": 2.339687241003549,
+        "eps_est": 0.013999181161854696,
+        "sigma_est": 0.01463374815671159,
+        "lyapunov_est": 0.5677376564918526,
+        "regime": "FIXED-POINT",
+        "coherence": 0.7637250190132393,
+        "variance": 0.26793744820070986
+      },
+      "rho_error_pct": 91.64397413927304,
+      "eps_error_pct": 78.1825625801321
+    },
+    {
+      "label": "chaotic med noise",
+      "actual": {
+        "sigma": 10,
+        "rho": 28,
+        "eps": 0.5
+      },
+      "estimated": {
+        "rho_est": 2.8586583221418396,
+        "eps_est": 0.015273311455533792,
+        "sigma_est": 0.012546270430553452,
+        "lyapunov_est": 0.400656936175436,
+        "regime": "FIXED-POINT",
+        "coherence": 0.9418115586229254,
+        "variance": 0.37173166442836797
+      },
+      "rho_error_pct": 89.79050599235057,
+      "eps_error_pct": 95.04444873420907
+    },
+    {
+      "label": "high chaos low noise",
+      "actual": {
+        "sigma": 10,
+        "rho": 45,
+        "eps": 0.1
+      },
+      "estimated": {
+        "rho_est": 3.923112968905647,
+        "eps_est": 0.030608946892224386,
+        "sigma_est": 0.03204296630432757,
+        "lyapunov_est": 0.3246306379471038,
+        "regime": "FIXED-POINT",
+        "coherence": 0.8963096604435675,
+        "variance": 0.5846225937811294
+      },
+      "rho_error_pct": 91.28197118020967,
+      "eps_error_pct": 63.08277555252329
+    },
+    {
+      "label": "meta-wheel optimum",
+      "actual": {
+        "sigma": 7,
+        "rho": 47,
+        "eps": 0.01
+      },
+      "estimated": {
+        "rho_est": 1.2051011322765963,
+        "eps_est": 0.01262771285163251,
+        "sigma_est": 0.07772832575644428,
+        "lyapunov_est": 0.4142140557853544,
+        "regime": "FIXED-POINT",
+        "coherence": 0.9673477951934303,
+        "variance": 0.04102022645531928
+      },
+      "rho_error_pct": 97.43595503770936,
+      "eps_error_pct": 13.13856425816255
+    }
+  ],
+  "style_fingerprints": {
+    "minimalist": {
+      "rho_est": 1.0000007994413027,
+      "eps_est": 3.684457612879945e-05,
+      "sigma_est": 0.1697806065062446,
+      "lyapunov_est": 0.6867159867633971,
+      "regime": "FIXED-POINT",
+      "coherence": 0.5653376136313579,
+      "variance": 1.598882605211378e-07
+    },
+    "classical": {
+      "rho_est": 2.565433694882682,
+      "eps_est": 0.012138157838264076,
+      "sigma_est": 0.009411287730871631,
+      "lyapunov_est": 0.6665534495486357,
+      "regime": "FIXED-POINT",
+      "coherence": 0.8159668083984601,
+      "variance": 0.31308673897653644
+    },
+    "jazz": {
+      "rho_est": 2.423762439994582,
+      "eps_est": 0.015026135855006595,
+      "sigma_est": 0.01585501783243015,
+      "lyapunov_est": 0.5904398754653957,
+      "regime": "FIXED-POINT",
+      "coherence": 0.8686246944446218,
+      "variance": 0.28475248799891645
+    },
+    "free_jazz": {
+      "rho_est": 3.4331633731854083,
+      "eps_est": 0.025378781788730903,
+      "sigma_est": 0.026467465960395842,
+      "lyapunov_est": 0.4493534448079902,
+      "regime": "FIXED-POINT",
+      "coherence": 0.8772912730406058,
+      "variance": 0.4866326746370817
+    },
+    "noise_music": {
+      "rho_est": 3.5164025659743854,
+      "eps_est": 0.03567108197213435,
+      "sigma_est": 0.050564257717954364,
+      "lyapunov_est": 0.3912495426466546,
+      "regime": "FIXED-POINT",
+      "coherence": 0.8461715367147359,
+      "variance": 0.5032805131948771
+    }
+  }
+}
