@@ -1,0 +1,63 @@
+{
+  "experiment": 49,
+  "title": "Creative Grief \u2014 What Happens When You Remove a Degree of Freedom",
+  "grief_results": {
+    "x": {
+      "quality_before": 0.3325037384485902,
+      "quality_during": 0.011402013819976324,
+      "quality_after": 0.31545721686831946,
+      "novelty_before": 0.004564511937469058,
+      "novelty_during": 0.0007739313314678586,
+      "novelty_after": 0.004146244801358519,
+      "coherence_before": 25.011923124867483,
+      "coherence_during": 3.0197661167539933,
+      "coherence_after": 28.510600260702528,
+      "hysteresis_quality": -0.017046521580270757,
+      "hysteresis_novelty": -0.00041826713611053945,
+      "grief_delta_q": -0.3211017246286139,
+      "grief_delta_n": -0.0037905806060011997,
+      "grief_delta_c": -21.99215700811349
+    },
+    "y": {
+      "quality_before": 0.27172313276054644,
+      "quality_during": 0.0069445288778394185,
+      "quality_after": 0.0,
+      "novelty_before": 0.004564511937468578,
+      "novelty_during": 0.00028606621135825644,
+      "novelty_after": 0.0,
+      "coherence_before": 16.75781540446562,
+      "coherence_during": 5.517641943617609,
+      "coherence_after": 0.9999999999002948,
+      "hysteresis_quality": -0.27172313276054644,
+      "hysteresis_novelty": -0.004564511937468578,
+      "grief_delta_q": -0.264778603882707,
+      "grief_delta_n": -0.004278445726110322,
+      "grief_delta_c": -11.240173460848013
+    },
+    "z": {
+      "quality_before": NaN,
+      "quality_during": NaN,
+      "quality_after": NaN,
+      "novelty_before": NaN,
+      "novelty_during": NaN,
+      "novelty_after": NaN,
+      "coherence_before": NaN,
+      "coherence_during": NaN,
+      "coherence_after": NaN,
+      "hysteresis_quality": NaN,
+      "hysteresis_novelty": NaN,
+      "grief_delta_q": NaN,
+      "grief_delta_n": NaN,
+      "grief_delta_c": NaN
+    }
+  },
+  "aesthetics": {
+    "baseline": 0.7492990391703337,
+    "fixed_\u03c11": 0.6393642500092385,
+    "periodic_\u03c115": 0.7281614368948586,
+    "grief_x": 0.30321032707084794,
+    "grief_y": 0.30321032707084794,
+    "grief_z": 2.2353102858435439e-07
+  },
+  "hysteresis_avg": NaN
+}
