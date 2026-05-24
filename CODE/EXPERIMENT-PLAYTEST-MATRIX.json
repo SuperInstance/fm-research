@@ -1,0 +1,165 @@
+{
+  "results": {
+    "5": {
+      "major": {
+        "beginner_listener": 4.740597835978299,
+        "classical_musician": 5.479609228347098,
+        "jazz_musician": 6.159377926608265,
+        "electronic_producer": 6.220488712013963,
+        "music_theorist": 5.913760320435107,
+        "casual_listener": 4.306211606844718,
+        "avant_garde": 4.852612788097927,
+        "dancer": 5.250038636493413
+      },
+      "minor": {
+        "beginner_listener": 4.755727724987491,
+        "classical_musician": 5.513946671598436,
+        "jazz_musician": 6.258011482151005,
+        "electronic_producer": 6.311604429142982,
+        "music_theorist": 5.899992254419081,
+        "casual_listener": 4.197564177157819,
+        "avant_garde": 4.850740970138457,
+        "dancer": 5.217980175335171
+      },
+      "blues": {
+        "beginner_listener": 5.71785304920898,
+        "classical_musician": 6.432036853602078,
+        "jazz_musician": 5.401218373066721,
+        "electronic_producer": 6.310620324860162,
+        "music_theorist": 6.197905503092143,
+        "casual_listener": 5.128406023541849,
+        "avant_garde": 3.9069941779423365,
+        "dancer": 6.1492617437635975
+      }
+    },
+    "15": {
+      "major": {
+        "beginner_listener": 5.670639941536365,
+        "classical_musician": 6.283160426950854,
+        "jazz_musician": 5.604691050070446,
+        "electronic_producer": 6.134446184542183,
+        "music_theorist": 6.49989873525325,
+        "casual_listener": 5.365859572468374,
+        "avant_garde": 4.096503728571774,
+        "dancer": 5.978804446931731
+      },
+      "minor": {
+        "beginner_listener": 5.684979866574746,
+        "classical_musician": 6.281119931916438,
+        "jazz_musician": 5.601792400026893,
+        "electronic_producer": 6.131709984816986,
+        "music_theorist": 6.502105651773862,
+        "casual_listener": 5.1886407870192865,
+        "avant_garde": 4.090256647195858,
+        "dancer": 5.979745409419575
+      },
+      "blues": {
+        "beginner_listener": 5.968950701269357,
+        "classical_musician": 6.5950123510769325,
+        "jazz_musician": 5.284016178947979,
+        "electronic_producer": 6.187731027080584,
+        "music_theorist": 6.182603614083895,
+        "casual_listener": 5.78247133646995,
+        "avant_garde": 3.7913675323269724,
+        "dancer": 6.282025467199709
+      }
+    },
+    "28": {
+      "major": {
+        "beginner_listener": 5.6787616451026945,
+        "classical_musician": 6.302903770098658,
+        "jazz_musician": 5.492460620679149,
+        "electronic_producer": 6.149646430121543,
+        "music_theorist": 6.378825832969087,
+        "casual_listener": 4.680190546360671,
+        "avant_garde": 3.9836515787494955,
+        "dancer": 6.013100963546465
+      },
+      "minor": {
+        "beginner_listener": 5.706876579746193,
+        "classical_musician": 6.285227710355418,
+        "jazz_musician": 5.490493530737664,
+        "electronic_producer": 6.162350444970002,
+        "music_theorist": 6.398611090967137,
+        "casual_listener": 4.593260117031365,
+        "avant_garde": 3.9743799260131247,
+        "dancer": 6.015666959637097
+      },
+      "blues": {
+        "beginner_listener": 5.98615730023242,
+        "classical_musician": 6.629566778228444,
+        "jazz_musician": 5.142652130037667,
+        "electronic_producer": 6.064182885364001,
+        "music_theorist": 6.073938433972131,
+        "casual_listener": 5.748705695231543,
+        "avant_garde": 3.6683033481046508,
+        "dancer": 6.333727508082168
+      }
+    },
+    "35": {
+      "major": {
+        "beginner_listener": 5.639483644110797,
+        "classical_musician": 6.30301722855028,
+        "jazz_musician": 5.48213640837259,
+        "electronic_producer": 6.14205984926418,
+        "music_theorist": 6.398098031554597,
+        "casual_listener": 5.052118394617246,
+        "avant_garde": 3.9953838109132542,
+        "dancer": 5.994139728706182
+      },
+      "minor": {
+        "beginner_listener": 5.6510428792109195,
+        "classical_musician": 6.304399215901766,
+        "jazz_musician": 5.491931280149309,
+        "electronic_producer": 6.144344096772574,
+        "music_theorist": 6.382746391009995,
+        "casual_listener": 5.082851738805564,
+        "avant_garde": 3.991221652023464,
+        "dancer": 5.993928177073314
+      },
+      "blues": {
+        "beginner_listener": 6.028857553401757,
+        "classical_musician": 6.631778017630656,
+        "jazz_musician": 5.163033296805917,
+        "electronic_producer": 6.063065086219911,
+        "music_theorist": 6.054764284589487,
+        "casual_listener": 5.712964738500483,
+        "avant_garde": 3.6611446436563186,
+        "dancer": 6.326084088230742
+      }
+    },
+    "45": {
+      "major": {
+        "beginner_listener": 5.693911182745442,
+        "classical_musician": 6.297479529807163,
+        "jazz_musician": 5.495682622353427,
+        "electronic_producer": 6.155954619727244,
+        "music_theorist": 6.391387038132695,
+        "casual_listener": 5.350500247721689,
+        "avant_garde": 3.9991800607939485,
+        "dancer": 6.013905404954604
+      },
+      "minor": {
+        "beginner_listener": 5.696634245062736,
+        "classical_musician": 6.318689430120376,
+        "jazz_musician": 5.513036292856542,
+        "electronic_producer": 6.142269924789982,
+        "music_theorist": 6.391411736209253,
+        "casual_listener": 5.31111412643345,
+        "avant_garde": 4.002283872087222,
+        "dancer": 6.025514692850295
+      },
+      "blues": {
+        "beginner_listener": 6.0545603202706655,
+        "classical_musician": 6.6422210974174565,
+        "jazz_musician": 5.1926143483354945,
+        "electronic_producer": 6.067872769713667,
+        "music_theorist": 6.0774143099782005,
+        "casual_listener": 5.781499495347667,
+        "avant_garde": 3.68195832619336,
+        "dancer": 6.329753688099462
+      }
+    }
+  },
+  "total_evals": 240
+}
