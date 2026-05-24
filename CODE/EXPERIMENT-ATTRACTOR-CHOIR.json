@@ -1,0 +1,1421 @@
+{
+  "n_voices": 1000,
+  "n_events": 256,
+  "interval_distribution": {
+    "unison": 4337,
+    "min2": 399,
+    "maj2": 404,
+    "min3": 364,
+    "maj3": 331,
+    "perf4": 395,
+    "tritone": 363,
+    "perf5": 172,
+    "min6": 319,
+    "maj6": 83,
+    "min7": 113,
+    "maj7": 220
+  },
+  "breathing_bpm": null,
+  "midi_events": [
+    {
+      "tick": 0,
+      "pitch": 96,
+      "velocity": 69,
+      "voice": 900,
+      "rho": 87.50201193350466
+    },
+    {
+      "tick": 0,
+      "pitch": 96,
+      "velocity": 69,
+      "voice": 235,
+      "rho": 92.35989390551462
+    },
+    {
+      "tick": 0,
+      "pitch": 96,
+      "velocity": 70,
+      "voice": 490,
+      "rho": 88.13999060311252
+    },
+    {
+      "tick": 0,
+      "pitch": 96,
+      "velocity": 71,
+      "voice": 641,
+      "rho": 83.50651989217663
+    },
+    {
+      "tick": 1,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 809,
+      "rho": 91.78496027822985
+    },
+    {
+      "tick": 1,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 471,
+      "rho": 97.15733826961412
+    },
+    {
+      "tick": 1,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 334,
+      "rho": 98.24816428612547
+    },
+    {
+      "tick": 1,
+      "pitch": 96,
+      "velocity": 81,
+      "voice": 496,
+      "rho": 95.50083888316473
+    },
+    {
+      "tick": 2,
+      "pitch": 96,
+      "velocity": 75,
+      "voice": 481,
+      "rho": 91.12840518691051
+    },
+    {
+      "tick": 2,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 807,
+      "rho": 89.69104916856199
+    },
+    {
+      "tick": 2,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 374,
+      "rho": 90.99622384179352
+    },
+    {
+      "tick": 2,
+      "pitch": 96,
+      "velocity": 80,
+      "voice": 491,
+      "rho": 93.78035294560829
+    },
+    {
+      "tick": 3,
+      "pitch": 96,
+      "velocity": 71,
+      "voice": 431,
+      "rho": 99.29809813165986
+    },
+    {
+      "tick": 3,
+      "pitch": 96,
+      "velocity": 72,
+      "voice": 637,
+      "rho": 86.26134118844921
+    },
+    {
+      "tick": 3,
+      "pitch": 96,
+      "velocity": 75,
+      "voice": 186,
+      "rho": 92.75041389006704
+    },
+    {
+      "tick": 3,
+      "pitch": 96,
+      "velocity": 75,
+      "voice": 235,
+      "rho": 92.35989390551462
+    },
+    {
+      "tick": 4,
+      "pitch": 96,
+      "velocity": 75,
+      "voice": 490,
+      "rho": 88.13999060311252
+    },
+    {
+      "tick": 4,
+      "pitch": 96,
+      "velocity": 78,
+      "voice": 334,
+      "rho": 98.24816428612547
+    },
+    {
+      "tick": 4,
+      "pitch": 96,
+      "velocity": 78,
+      "voice": 786,
+      "rho": 96.1680655480645
+    },
+    {
+      "tick": 4,
+      "pitch": 96,
+      "velocity": 80,
+      "voice": 721,
+      "rho": 99.85934133306763
+    },
+    {
+      "tick": 5,
+      "pitch": 96,
+      "velocity": 74,
+      "voice": 491,
+      "rho": 93.78035294560829
+    },
+    {
+      "tick": 5,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 237,
+      "rho": 96.14853756662319
+    },
+    {
+      "tick": 5,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 807,
+      "rho": 89.69104916856199
+    },
+    {
+      "tick": 5,
+      "pitch": 96,
+      "velocity": 80,
+      "voice": 542,
+      "rho": 97.76068092193611
+    },
+    {
+      "tick": 6,
+      "pitch": 96,
+      "velocity": 80,
+      "voice": 235,
+      "rho": 92.35989390551462
+    },
+    {
+      "tick": 6,
+      "pitch": 96,
+      "velocity": 80,
+      "voice": 186,
+      "rho": 92.75041389006704
+    },
+    {
+      "tick": 6,
+      "pitch": 96,
+      "velocity": 81,
+      "voice": 431,
+      "rho": 99.29809813165986
+    },
+    {
+      "tick": 6,
+      "pitch": 96,
+      "velocity": 82,
+      "voice": 469,
+      "rho": 99.31785395330505
+    },
+    {
+      "tick": 7,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 199,
+      "rho": 92.57186065596846
+    },
+    {
+      "tick": 7,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 537,
+      "rho": 84.85918174075198
+    },
+    {
+      "tick": 7,
+      "pitch": 96,
+      "velocity": 78,
+      "voice": 999,
+      "rho": 94.14533629279578
+    },
+    {
+      "tick": 7,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 82,
+      "rho": 94.3250534903132
+    },
+    {
+      "tick": 8,
+      "pitch": 96,
+      "velocity": 73,
+      "voice": 276,
+      "rho": 95.17022699846387
+    },
+    {
+      "tick": 8,
+      "pitch": 96,
+      "velocity": 73,
+      "voice": 552,
+      "rho": 81.85792820126002
+    },
+    {
+      "tick": 8,
+      "pitch": 96,
+      "velocity": 75,
+      "voice": 807,
+      "rho": 89.69104916856199
+    },
+    {
+      "tick": 8,
+      "pitch": 96,
+      "velocity": 81,
+      "voice": 735,
+      "rho": 97.68039881329705
+    },
+    {
+      "tick": 9,
+      "pitch": 96,
+      "velocity": 78,
+      "voice": 217,
+      "rho": 88.21151273918667
+    },
+    {
+      "tick": 9,
+      "pitch": 96,
+      "velocity": 78,
+      "voice": 481,
+      "rho": 91.12840518691051
+    },
+    {
+      "tick": 9,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 815,
+      "rho": 95.41244302483213
+    },
+    {
+      "tick": 9,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 786,
+      "rho": 96.1680655480645
+    },
+    {
+      "tick": 10,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 901,
+      "rho": 83.08670085321103
+    },
+    {
+      "tick": 10,
+      "pitch": 96,
+      "velocity": 78,
+      "voice": 312,
+      "rho": 97.57519579601347
+    },
+    {
+      "tick": 10,
+      "pitch": 96,
+      "velocity": 80,
+      "voice": 199,
+      "rho": 92.57186065596846
+    },
+    {
+      "tick": 10,
+      "pitch": 96,
+      "velocity": 80,
+      "voice": 999,
+      "rho": 94.14533629279578
+    },
+    {
+      "tick": 11,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 766,
+      "rho": 86.82573854410293
+    },
+    {
+      "tick": 11,
+      "pitch": 96,
+      "velocity": 78,
+      "voice": 97,
+      "rho": 92.33838116682406
+    },
+    {
+      "tick": 11,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 110,
+      "rho": 96.39350273857423
+    },
+    {
+      "tick": 11,
+      "pitch": 96,
+      "velocity": 82,
+      "voice": 721,
+      "rho": 99.85934133306763
+    },
+    {
+      "tick": 12,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 92,
+      "rho": 96.14344629522245
+    },
+    {
+      "tick": 12,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 730,
+      "rho": 85.97810783924812
+    },
+    {
+      "tick": 12,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 481,
+      "rho": 91.12840518691051
+    },
+    {
+      "tick": 12,
+      "pitch": 96,
+      "velocity": 82,
+      "voice": 334,
+      "rho": 98.24816428612547
+    },
+    {
+      "tick": 13,
+      "pitch": 96,
+      "velocity": 80,
+      "voice": 471,
+      "rho": 97.15733826961412
+    },
+    {
+      "tick": 13,
+      "pitch": 96,
+      "velocity": 81,
+      "voice": 431,
+      "rho": 99.29809813165986
+    },
+    {
+      "tick": 13,
+      "pitch": 96,
+      "velocity": 81,
+      "voice": 312,
+      "rho": 97.57519579601347
+    },
+    {
+      "tick": 13,
+      "pitch": 96,
+      "velocity": 81,
+      "voice": 815,
+      "rho": 95.41244302483213
+    },
+    {
+      "tick": 14,
+      "pitch": 96,
+      "velocity": 74,
+      "voice": 542,
+      "rho": 97.76068092193611
+    },
+    {
+      "tick": 14,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 955,
+      "rho": 83.45189295637887
+    },
+    {
+      "tick": 14,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 807,
+      "rho": 89.69104916856199
+    },
+    {
+      "tick": 14,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 97,
+      "rho": 92.33838116682406
+    },
+    {
+      "tick": 15,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 952,
+      "rho": 91.85960429533898
+    },
+    {
+      "tick": 15,
+      "pitch": 96,
+      "velocity": 78,
+      "voice": 82,
+      "rho": 94.3250534903132
+    },
+    {
+      "tick": 15,
+      "pitch": 96,
+      "velocity": 78,
+      "voice": 481,
+      "rho": 91.12840518691051
+    },
+    {
+      "tick": 15,
+      "pitch": 96,
+      "velocity": 81,
+      "voice": 110,
+      "rho": 96.39350273857423
+    },
+    {
+      "tick": 16,
+      "pitch": 96,
+      "velocity": 74,
+      "voice": 641,
+      "rho": 83.50651989217663
+    },
+    {
+      "tick": 16,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 898,
+      "rho": 96.43788471778176
+    },
+    {
+      "tick": 16,
+      "pitch": 96,
+      "velocity": 78,
+      "voice": 469,
+      "rho": 99.31785395330505
+    },
+    {
+      "tick": 16,
+      "pitch": 96,
+      "velocity": 80,
+      "voice": 496,
+      "rho": 95.50083888316473
+    },
+    {
+      "tick": 17,
+      "pitch": 95,
+      "velocity": 73,
+      "voice": 149,
+      "rho": 79.8421231383391
+    },
+    {
+      "tick": 17,
+      "pitch": 96,
+      "velocity": 73,
+      "voice": 97,
+      "rho": 92.33838116682406
+    },
+    {
+      "tick": 17,
+      "pitch": 94,
+      "velocity": 74,
+      "voice": 118,
+      "rho": 78.34771257067325
+    },
+    {
+      "tick": 17,
+      "pitch": 96,
+      "velocity": 78,
+      "voice": 807,
+      "rho": 89.69104916856199
+    },
+    {
+      "tick": 18,
+      "pitch": 96,
+      "velocity": 72,
+      "voice": 896,
+      "rho": 84.9266503545815
+    },
+    {
+      "tick": 18,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 542,
+      "rho": 97.76068092193611
+    },
+    {
+      "tick": 18,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 952,
+      "rho": 91.85960429533898
+    },
+    {
+      "tick": 18,
+      "pitch": 96,
+      "velocity": 80,
+      "voice": 721,
+      "rho": 99.85934133306763
+    },
+    {
+      "tick": 19,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 481,
+      "rho": 91.12840518691051
+    },
+    {
+      "tick": 19,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 735,
+      "rho": 97.68039881329705
+    },
+    {
+      "tick": 19,
+      "pitch": 96,
+      "velocity": 80,
+      "voice": 82,
+      "rho": 94.3250534903132
+    },
+    {
+      "tick": 19,
+      "pitch": 96,
+      "velocity": 81,
+      "voice": 859,
+      "rho": 97.04651566460566
+    },
+    {
+      "tick": 20,
+      "pitch": 96,
+      "velocity": 74,
+      "voice": 431,
+      "rho": 99.29809813165986
+    },
+    {
+      "tick": 20,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 809,
+      "rho": 91.78496027822985
+    },
+    {
+      "tick": 20,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 900,
+      "rho": 87.50201193350466
+    },
+    {
+      "tick": 20,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 923,
+      "rho": 94.08105891540608
+    },
+    {
+      "tick": 21,
+      "pitch": 96,
+      "velocity": 67,
+      "voice": 815,
+      "rho": 95.41244302483213
+    },
+    {
+      "tick": 21,
+      "pitch": 96,
+      "velocity": 70,
+      "voice": 721,
+      "rho": 99.85934133306763
+    },
+    {
+      "tick": 21,
+      "pitch": 96,
+      "velocity": 70,
+      "voice": 688,
+      "rho": 80.48820881336037
+    },
+    {
+      "tick": 21,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 952,
+      "rho": 91.85960429533898
+    },
+    {
+      "tick": 22,
+      "pitch": 96,
+      "velocity": 74,
+      "voice": 491,
+      "rho": 93.78035294560829
+    },
+    {
+      "tick": 22,
+      "pitch": 96,
+      "velocity": 74,
+      "voice": 186,
+      "rho": 92.75041389006704
+    },
+    {
+      "tick": 22,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 312,
+      "rho": 97.57519579601347
+    },
+    {
+      "tick": 22,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 786,
+      "rho": 96.1680655480645
+    },
+    {
+      "tick": 23,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 490,
+      "rho": 88.13999060311252
+    },
+    {
+      "tick": 23,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 431,
+      "rho": 99.29809813165986
+    },
+    {
+      "tick": 23,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 809,
+      "rho": 91.78496027822985
+    },
+    {
+      "tick": 23,
+      "pitch": 96,
+      "velocity": 82,
+      "voice": 469,
+      "rho": 99.31785395330505
+    },
+    {
+      "tick": 24,
+      "pitch": 96,
+      "velocity": 68,
+      "voice": 952,
+      "rho": 91.85960429533898
+    },
+    {
+      "tick": 24,
+      "pitch": 96,
+      "velocity": 68,
+      "voice": 662,
+      "rho": 81.77850688151148
+    },
+    {
+      "tick": 24,
+      "pitch": 96,
+      "velocity": 69,
+      "voice": 815,
+      "rho": 95.41244302483213
+    },
+    {
+      "tick": 24,
+      "pitch": 96,
+      "velocity": 72,
+      "voice": 394,
+      "rho": 90.99348651762918
+    },
+    {
+      "tick": 25,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 235,
+      "rho": 92.35989390551462
+    },
+    {
+      "tick": 25,
+      "pitch": 96,
+      "velocity": 78,
+      "voice": 126,
+      "rho": 87.76849402916216
+    },
+    {
+      "tick": 25,
+      "pitch": 96,
+      "velocity": 80,
+      "voice": 186,
+      "rho": 92.75041389006704
+    },
+    {
+      "tick": 25,
+      "pitch": 96,
+      "velocity": 81,
+      "voice": 312,
+      "rho": 97.57519579601347
+    },
+    {
+      "tick": 26,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 809,
+      "rho": 91.78496027822985
+    },
+    {
+      "tick": 26,
+      "pitch": 96,
+      "velocity": 78,
+      "voice": 490,
+      "rho": 88.13999060311252
+    },
+    {
+      "tick": 26,
+      "pitch": 96,
+      "velocity": 80,
+      "voice": 471,
+      "rho": 97.15733826961412
+    },
+    {
+      "tick": 26,
+      "pitch": 96,
+      "velocity": 80,
+      "voice": 237,
+      "rho": 96.14853756662319
+    },
+    {
+      "tick": 27,
+      "pitch": 93,
+      "velocity": 70,
+      "voice": 860,
+      "rho": 77.29710922927893
+    },
+    {
+      "tick": 27,
+      "pitch": 94,
+      "velocity": 73,
+      "voice": 776,
+      "rho": 78.3512967377277
+    },
+    {
+      "tick": 27,
+      "pitch": 96,
+      "velocity": 73,
+      "voice": 92,
+      "rho": 96.14344629522245
+    },
+    {
+      "tick": 27,
+      "pitch": 96,
+      "velocity": 80,
+      "voice": 786,
+      "rho": 96.1680655480645
+    },
+    {
+      "tick": 28,
+      "pitch": 96,
+      "velocity": 75,
+      "voice": 327,
+      "rho": 96.65058308080494
+    },
+    {
+      "tick": 28,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 186,
+      "rho": 92.75041389006704
+    },
+    {
+      "tick": 28,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 721,
+      "rho": 99.85934133306763
+    },
+    {
+      "tick": 28,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 235,
+      "rho": 92.35989390551462
+    },
+    {
+      "tick": 29,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 955,
+      "rho": 83.45189295637887
+    },
+    {
+      "tick": 29,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 807,
+      "rho": 89.69104916856199
+    },
+    {
+      "tick": 29,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 675,
+      "rho": 95.33511183345038
+    },
+    {
+      "tick": 29,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 199,
+      "rho": 92.57186065596846
+    },
+    {
+      "tick": 30,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 641,
+      "rho": 83.50651989217663
+    },
+    {
+      "tick": 30,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 490,
+      "rho": 88.13999060311252
+    },
+    {
+      "tick": 30,
+      "pitch": 96,
+      "velocity": 78,
+      "voice": 469,
+      "rho": 99.31785395330505
+    },
+    {
+      "tick": 30,
+      "pitch": 96,
+      "velocity": 82,
+      "voice": 431,
+      "rho": 99.29809813165986
+    },
+    {
+      "tick": 31,
+      "pitch": 96,
+      "velocity": 74,
+      "voice": 532,
+      "rho": 87.96574437446127
+    },
+    {
+      "tick": 31,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 334,
+      "rho": 98.24816428612547
+    },
+    {
+      "tick": 31,
+      "pitch": 96,
+      "velocity": 78,
+      "voice": 735,
+      "rho": 97.68039881329705
+    },
+    {
+      "tick": 31,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 92,
+      "rho": 96.14344629522245
+    },
+    {
+      "tick": 32,
+      "pitch": 96,
+      "velocity": 73,
+      "voice": 506,
+      "rho": 81.56327241316635
+    },
+    {
+      "tick": 32,
+      "pitch": 96,
+      "velocity": 75,
+      "voice": 675,
+      "rho": 95.33511183345038
+    },
+    {
+      "tick": 32,
+      "pitch": 96,
+      "velocity": 78,
+      "voice": 199,
+      "rho": 92.57186065596846
+    },
+    {
+      "tick": 32,
+      "pitch": 96,
+      "velocity": 81,
+      "voice": 999,
+      "rho": 94.14533629279578
+    },
+    {
+      "tick": 33,
+      "pitch": 96,
+      "velocity": 75,
+      "voice": 312,
+      "rho": 97.57519579601347
+    },
+    {
+      "tick": 33,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 469,
+      "rho": 99.31785395330505
+    },
+    {
+      "tick": 33,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 82,
+      "rho": 94.3250534903132
+    },
+    {
+      "tick": 33,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 97,
+      "rho": 92.33838116682406
+    },
+    {
+      "tick": 34,
+      "pitch": 91,
+      "velocity": 72,
+      "voice": 588,
+      "rho": 73.85164522770465
+    },
+    {
+      "tick": 34,
+      "pitch": 96,
+      "velocity": 75,
+      "voice": 532,
+      "rho": 87.96574437446127
+    },
+    {
+      "tick": 34,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 119,
+      "rho": 93.50634106478286
+    },
+    {
+      "tick": 34,
+      "pitch": 96,
+      "velocity": 81,
+      "voice": 230,
+      "rho": 96.27911089580093
+    },
+    {
+      "tick": 35,
+      "pitch": 96,
+      "velocity": 69,
+      "voice": 898,
+      "rho": 96.43788471778176
+    },
+    {
+      "tick": 35,
+      "pitch": 96,
+      "velocity": 71,
+      "voice": 662,
+      "rho": 81.77850688151148
+    },
+    {
+      "tick": 35,
+      "pitch": 96,
+      "velocity": 78,
+      "voice": 999,
+      "rho": 94.14533629279578
+    },
+    {
+      "tick": 35,
+      "pitch": 96,
+      "velocity": 82,
+      "voice": 721,
+      "rho": 99.85934133306763
+    },
+    {
+      "tick": 36,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 923,
+      "rho": 94.08105891540608
+    },
+    {
+      "tick": 36,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 91,
+      "rho": 89.89874275127548
+    },
+    {
+      "tick": 36,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 97,
+      "rho": 92.33838116682406
+    },
+    {
+      "tick": 36,
+      "pitch": 96,
+      "velocity": 80,
+      "voice": 276,
+      "rho": 95.17022699846387
+    },
+    {
+      "tick": 37,
+      "pitch": 96,
+      "velocity": 73,
+      "voice": 952,
+      "rho": 91.85960429533898
+    },
+    {
+      "tick": 37,
+      "pitch": 94,
+      "velocity": 74,
+      "voice": 46,
+      "rho": 78.5975621197411
+    },
+    {
+      "tick": 37,
+      "pitch": 96,
+      "velocity": 75,
+      "voice": 237,
+      "rho": 96.14853756662319
+    },
+    {
+      "tick": 37,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 431,
+      "rho": 99.29809813165986
+    },
+    {
+      "tick": 38,
+      "pitch": 96,
+      "velocity": 70,
+      "voice": 491,
+      "rho": 93.78035294560829
+    },
+    {
+      "tick": 38,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 496,
+      "rho": 95.50083888316473
+    },
+    {
+      "tick": 38,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 542,
+      "rho": 97.76068092193611
+    },
+    {
+      "tick": 38,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 92,
+      "rho": 96.14344629522245
+    },
+    {
+      "tick": 39,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 327,
+      "rho": 96.65058308080494
+    },
+    {
+      "tick": 39,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 82,
+      "rho": 94.3250534903132
+    },
+    {
+      "tick": 39,
+      "pitch": 96,
+      "velocity": 80,
+      "voice": 119,
+      "rho": 93.50634106478286
+    },
+    {
+      "tick": 39,
+      "pitch": 96,
+      "velocity": 80,
+      "voice": 735,
+      "rho": 97.68039881329705
+    },
+    {
+      "tick": 40,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 637,
+      "rho": 86.26134118844921
+    },
+    {
+      "tick": 40,
+      "pitch": 96,
+      "velocity": 78,
+      "voice": 952,
+      "rho": 91.85960429533898
+    },
+    {
+      "tick": 40,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 431,
+      "rho": 99.29809813165986
+    },
+    {
+      "tick": 40,
+      "pitch": 96,
+      "velocity": 82,
+      "voice": 469,
+      "rho": 99.31785395330505
+    },
+    {
+      "tick": 41,
+      "pitch": 96,
+      "velocity": 74,
+      "voice": 300,
+      "rho": 80.93297620750658
+    },
+    {
+      "tick": 41,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 746,
+      "rho": 87.35706573329105
+    },
+    {
+      "tick": 41,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 171,
+      "rho": 84.65157738595681
+    },
+    {
+      "tick": 41,
+      "pitch": 96,
+      "velocity": 81,
+      "voice": 237,
+      "rho": 96.14853756662319
+    },
+    {
+      "tick": 42,
+      "pitch": 96,
+      "velocity": 73,
+      "voice": 786,
+      "rho": 96.1680655480645
+    },
+    {
+      "tick": 42,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 491,
+      "rho": 93.78035294560829
+    },
+    {
+      "tick": 42,
+      "pitch": 96,
+      "velocity": 81,
+      "voice": 859,
+      "rho": 97.04651566460566
+    },
+    {
+      "tick": 42,
+      "pitch": 96,
+      "velocity": 81,
+      "voice": 721,
+      "rho": 99.85934133306763
+    },
+    {
+      "tick": 43,
+      "pitch": 96,
+      "velocity": 74,
+      "voice": 496,
+      "rho": 95.50083888316473
+    },
+    {
+      "tick": 43,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 637,
+      "rho": 86.26134118844921
+    },
+    {
+      "tick": 43,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 110,
+      "rho": 96.39350273857423
+    },
+    {
+      "tick": 43,
+      "pitch": 96,
+      "velocity": 80,
+      "voice": 952,
+      "rho": 91.85960429533898
+    },
+    {
+      "tick": 44,
+      "pitch": 96,
+      "velocity": 72,
+      "voice": 515,
+      "rho": 80.94324139814141
+    },
+    {
+      "tick": 44,
+      "pitch": 92,
+      "velocity": 73,
+      "voice": 685,
+      "rho": 75.28777171318595
+    },
+    {
+      "tick": 44,
+      "pitch": 96,
+      "velocity": 73,
+      "voice": 235,
+      "rho": 92.35989390551462
+    },
+    {
+      "tick": 44,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 186,
+      "rho": 92.75041389006704
+    },
+    {
+      "tick": 45,
+      "pitch": 96,
+      "velocity": 75,
+      "voice": 786,
+      "rho": 96.1680655480645
+    },
+    {
+      "tick": 45,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 746,
+      "rho": 87.35706573329105
+    },
+    {
+      "tick": 45,
+      "pitch": 96,
+      "velocity": 76,
+      "voice": 327,
+      "rho": 96.65058308080494
+    },
+    {
+      "tick": 45,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 237,
+      "rho": 96.14853756662319
+    },
+    {
+      "tick": 46,
+      "pitch": 96,
+      "velocity": 71,
+      "voice": 491,
+      "rho": 93.78035294560829
+    },
+    {
+      "tick": 46,
+      "pitch": 96,
+      "velocity": 71,
+      "voice": 439,
+      "rho": 84.37357485333436
+    },
+    {
+      "tick": 46,
+      "pitch": 96,
+      "velocity": 71,
+      "voice": 662,
+      "rho": 81.77850688151148
+    },
+    {
+      "tick": 46,
+      "pitch": 96,
+      "velocity": 74,
+      "voice": 952,
+      "rho": 91.85960429533898
+    },
+    {
+      "tick": 47,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 186,
+      "rho": 92.75041389006704
+    },
+    {
+      "tick": 47,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 235,
+      "rho": 92.35989390551462
+    },
+    {
+      "tick": 47,
+      "pitch": 96,
+      "velocity": 79,
+      "voice": 469,
+      "rho": 99.31785395330505
+    },
+    {
+      "tick": 47,
+      "pitch": 96,
+      "velocity": 82,
+      "voice": 431,
+      "rho": 99.29809813165986
+    },
+    {
+      "tick": 48,
+      "pitch": 96,
+      "velocity": 73,
+      "voice": 746,
+      "rho": 87.35706573329105
+    },
+    {
+      "tick": 48,
+      "pitch": 96,
+      "velocity": 73,
+      "voice": 230,
+      "rho": 96.27911089580093
+    },
+    {
+      "tick": 48,
+      "pitch": 96,
+      "velocity": 78,
+      "voice": 199,
+      "rho": 92.57186065596846
+    },
+    {
+      "tick": 48,
+      "pitch": 96,
+      "velocity": 78,
+      "voice": 809,
+      "rho": 91.78496027822985
+    },
+    {
+      "tick": 49,
+      "pitch": 94,
+      "velocity": 73,
+      "voice": 776,
+      "rho": 78.3512967377277
+    },
+    {
+      "tick": 49,
+      "pitch": 96,
+      "velocity": 73,
+      "voice": 110,
+      "rho": 96.39350273857423
+    },
+    {
+      "tick": 49,
+      "pitch": 96,
+      "velocity": 75,
+      "voice": 284,
+      "rho": 82.0232587195144
+    },
+    {
+      "tick": 49,
+      "pitch": 96,
+      "velocity": 77,
+      "voice": 721,
+      "rho": 99.85934133306763
+    }
+  ]
+}
