@@ -1,0 +1,273 @@
+{
+  "prophecy_score": {
+    "confirmed": 1,
+    "falsified": 2,
+    "untested": 5,
+    "pending": 1
+  },
+  "compression_peak": {
+    "rho": 33.0,
+    "dyn_div": 3.552713678800501e-15,
+    "unique_mel": 1,
+    "compression": 3.552713678800501e-15
+  },
+  "window_data": [
+    {
+      "rho": 18.0,
+      "mus": 0.2419491279530567,
+      "ce": 0.251400265763723,
+      "cons": 0.9624060150375939,
+      "std": 0.013223233642365882,
+      "fisher": 0.00011588198107445481
+    },
+    {
+      "rho": 18.25,
+      "mus": 0.24236395946052153,
+      "ce": 0.251177194349995,
+      "cons": 0.9649122807017544,
+      "std": 0.01610968088636848,
+      "fisher": 0.00012128291870069602
+    },
+    {
+      "rho": 18.5,
+      "mus": 0.2432229349312799,
+      "ce": 0.25206740529241733,
+      "cons": 0.9649122807017544,
+      "std": 0.018778583201285195,
+      "fisher": 0.00014149336886941212
+    },
+    {
+      "rho": 18.75,
+      "mus": 0.24085804891860918,
+      "ce": 0.25157686261393997,
+      "cons": 0.9573934837092731,
+      "std": 0.022627051211855848,
+      "fisher": 0.0003374942630253142
+    },
+    {
+      "rho": 19.0,
+      "mus": 0.24065155270972244,
+      "ce": 0.250052003987446,
+      "cons": 0.9624060150375939,
+      "std": 0.027204288091982654,
+      "fisher": 0.00030147299112153034
+    },
+    {
+      "rho": 19.25,
+      "mus": 0.23846895836886964,
+      "ce": 0.24973520837054852,
+      "cons": 0.9548872180451128,
+      "std": 0.031847617341006156,
+      "fisher": 0.0004842782153169004
+    },
+    {
+      "rho": 19.5,
+      "mus": 0.23552739098048917,
+      "ce": 0.24730376052951364,
+      "cons": 0.9523809523809523,
+      "std": 0.03855949147642166,
+      "fisher": 0.0009090862552501521
+    },
+    {
+      "rho": 19.75,
+      "mus": 0.23150586995673775,
+      "ce": 0.24308116345457464,
+      "cons": 0.9523809523809523,
+      "std": 0.046022358211107936,
+      "fisher": 0.0008596043876818416
+    },
+    {
+      "rho": 20.0,
+      "mus": 0.2185434289475689,
+      "ce": 0.2319117769948936,
+      "cons": 0.9423558897243107,
+      "std": 0.05414889017796679,
+      "fisher": 0.001463970704079937
+    },
+    {
+      "rho": 20.25,
+      "mus": 0.2122386748354542,
+      "ce": 0.2234386049059267,
+      "cons": 0.949874686716792,
+      "std": 0.06547358875518737,
+      "fisher": 0.002557539672766273
+    },
+    {
+      "rho": 20.5,
+      "mus": 0.20253383177462883,
+      "ce": 0.21435278216996526,
+      "cons": 0.9448621553884712,
+      "std": 0.07837592753490133,
+      "fisher": 0.0027251963429771567
+    },
+    {
+      "rho": 20.75,
+      "mus": 0.1978594501184727,
+      "ce": 0.21279223880665932,
+      "cons": 0.9298245614035088,
+      "std": 0.09271522682533631,
+      "fisher": 0.0043666301404718735
+    },
+    {
+      "rho": 21.0,
+      "mus": 0.18508020547667123,
+      "ce": 0.20121798906046817,
+      "cons": 0.9197994987468672,
+      "std": 0.11209209620507235,
+      "fisher": 0.0076031033271841105
+    },
+    {
+      "rho": 21.25,
+      "mus": 0.1791107073419091,
+      "ce": 0.18806624270900457,
+      "cons": 0.9523809523809523,
+      "std": 0.13508026610640364,
+      "fisher": 0.009193069378153248
+    },
+    {
+      "rho": 21.5,
+      "mus": 0.14573406908003794,
+      "ce": 0.15589247604004058,
+      "cons": 0.9348370927318296,
+      "std": 0.16107811935009742,
+      "fisher": 0.01349509760653415
+    },
+    {
+      "rho": 21.75,
+      "mus": 0.13379590562865162,
+      "ce": 0.14666089655448353,
+      "cons": 0.9122807017543859,
+      "std": 0.19484083539262811,
+      "fisher": 0.024095948450454253
+    },
+    {
+      "rho": 22.0,
+      "mus": 0.1248176612057093,
+      "ce": 0.13681935939856596,
+      "cons": 0.9122807017543859,
+      "std": 0.23828226984205209,
+      "fisher": 0.036355550922752035
+    },
+    {
+      "rho": 22.25,
+      "mus": 0.11385079809325932,
+      "ce": 0.12583509262939188,
+      "cons": 0.9047619047619048,
+      "std": 0.29033784298191884,
+      "fisher": 0.05253110124057641
+    },
+    {
+      "rho": 22.5,
+      "mus": 0.09656688173630826,
+      "ce": 0.10823085902468257,
+      "cons": 0.8922305764411027,
+      "std": 0.35604154230578794,
+      "fisher": 0.09219282488023899
+    },
+    {
+      "rho": 22.75,
+      "mus": 0.07777898281463393,
+      "ce": 0.08917762684781304,
+      "cons": 0.8721804511278195,
+      "std": 0.4450932732656649,
+      "fisher": 0.1709519790063646
+    },
+    {
+      "rho": 23.0,
+      "mus": 0.05707603155292445,
+      "ce": 0.06620155985353737,
+      "cons": 0.8621553884711779,
+      "std": 0.5656297188999894,
+      "fisher": 0.31530282227705614
+    },
+    {
+      "rho": 23.25,
+      "mus": 0.034480570831777975,
+      "ce": 0.042072623125013496,
+      "cons": 0.8195488721804511,
+      "std": 0.7351351526792033,
+      "fisher": 0.6787751439546944
+    },
+    {
+      "rho": 23.5,
+      "mus": 0.015845071473390076,
+      "ce": 0.020134342413638984,
+      "cons": 0.7869674185463659,
+      "std": 1.004469353248125,
+      "fisher": 2.051558512988572
+    },
+    {
+      "rho": 23.75,
+      "mus": 0.006899364264635522,
+      "ce": 0.00936342293057678,
+      "cons": 0.7368421052631579,
+      "std": 1.6202918175465808,
+      "fisher": 24.515936153709102
+    },
+    {
+      "rho": 24.0,
+      "mus": 0.09295396255804561,
+      "ce": 0.0976016606859479,
+      "cons": 0.9523809523809523,
+      "std": 5.173524084094978,
+      "fisher": 1213.9171642816918
+    },
+    {
+      "rho": 24.25,
+      "mus": 0.038527693402862884,
+      "ce": 0.038917847260107066,
+      "cons": 0.9899749373433584,
+      "std": 7.067599045607284,
+      "fisher": 7.943032386021488
+    },
+    {
+      "rho": 24.5,
+      "mus": 0.029933155250709567,
+      "ce": 0.03008395200260231,
+      "cons": 0.9949874686716792,
+      "std": 7.2980803664724485,
+      "fisher": 0.8735873981102041
+    },
+    {
+      "rho": 24.75,
+      "mus": 0.030679956115536863,
+      "ce": 0.030679956115536863,
+      "cons": 1.0,
+      "std": 7.3481072477042835,
+      "fisher": 78.0936849298537
+    },
+    {
+      "rho": 25.0,
+      "mus": 0.03639316153292043,
+      "ce": 0.0364846016372745,
+      "cons": 0.9974937343358395,
+      "std": 7.345008547190212,
+      "fisher": 5.874432936304191
+    },
+    {
+      "rho": 25.25,
+      "mus": 0.04971176815866311,
+      "ce": 0.05008837246289541,
+      "cons": 0.9924812030075187,
+      "std": 6.915365565059792,
+      "fisher": 6.5536608478614635
+    },
+    {
+      "rho": 25.5,
+      "mus": 0.030671655583623142,
+      "ce": 0.030982254627507932,
+      "cons": 0.9899749373433584,
+      "std": 7.468591878261629,
+      "fisher": 2.8425266488825582
+    },
+    {
+      "rho": 25.75,
+      "mus": 0.03803403153264616,
+      "ce": 0.03822563874439752,
+      "cons": 0.9949874686716792,
+      "std": 7.347516458272673,
+      "fisher": 7.90131307294882
+    }
+  ],
+  "milestone_summary": "THIRD MILESTONE: WHAT EXPERIMENTS 101-149 TAUGHT THAT 1-100 DIDN'T\n\n1. MYTHOLOGY IS METHOD \u2014 Archetypes predicted results. Sovereign wins. Shadow is silent. Not decoration.\n\n2. THE CLIFF IS A COMPRESSION BOUNDARY \u2014 Many dynamics, one melody. All diversity collapses into a single voice.\n\n3. CHAOS IS A MONOCULTURE \u2014 Just like order. Both extremes are single-voice. Only the cliff has diversity (in dynamics, not melody).\n\n4. THE MARRIAGE IS DESTRUCTIVE \u2014 Chaos destroys order without gaining anything. Coupling is asymmetric: chaos wins.\n\n5. NO EMERGENCE FROM MEDIAN \u2014 Taking the median of multiple systems always suppresses musicality. The choir is less than the soloist.\n\n6. CONVERSATION IS REAL BUT FRAGILE \u2014 Moderate coupling creates dialogue. Too much = merge. Too little = solo.\n\n7. THE OBSERVER IS A DAMPENED ECHO \u2014 No self-awareness. The observer absorbs, doesn't amplify.\n\n8. THE MANDALA DOESN'T CLOSE \u2014 Transformation is permanent. You don't return.\n\n9. RESURRECTION IS PERFECT \u2014 The attractor has no memory of death.\n\n10. PROPHECIES: 2 falsified, 0 confirmed, 4 untested, 1 pending. Science works.\n\n11. THE MOST MUSICAL ATTRACTOR IS A FIXED POINT \u2014 Sacred geometry is a dot.\n\n12. THE DREAM IS LESS MUSICAL \u2014 Sleep reduces complexity. Waking is better for music.\n\n13. THE MEMORY PALACE HAS 5 ROOMS \u2014 Each with its own dominant pitch. The Threshold room is richest.\n\n14. SCALE CHOICE IS COSMETIC \u2014 Different scales produce identical musicality from the same dynamics.\n\n15. THE ATTRACTOR IS A ONE-VOICE INSTRUMENT \u2014 No matter how you slice it, the Lorenz system produces one melody."
+}
