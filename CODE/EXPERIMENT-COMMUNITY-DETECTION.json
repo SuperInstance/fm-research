@@ -1,0 +1,57 @@
+{
+  "n_points": 80,
+  "k": 5,
+  "ridge": {
+    "1": {
+      "rho": 1,
+      "best_eps": 0.01,
+      "best_quality": 0.0015181007833486608
+    },
+    "5": {
+      "rho": 5,
+      "best_eps": 0.01,
+      "best_quality": 0.006415162472895664
+    },
+    "10": {
+      "rho": 10,
+      "best_eps": 0.01,
+      "best_quality": 0.060759137059902435
+    },
+    "15": {
+      "rho": 15,
+      "best_eps": 0.01,
+      "best_quality": 0.3766109391066559
+    },
+    "20": {
+      "rho": 20,
+      "best_eps": 0.01,
+      "best_quality": 0.6607020456325441
+    },
+    "25": {
+      "rho": 25,
+      "best_eps": 0.01,
+      "best_quality": 3.1241499186000423
+    },
+    "28": {
+      "rho": 28,
+      "best_eps": 0.01,
+      "best_quality": 5.0134142626544245
+    },
+    "35": {
+      "rho": 35,
+      "best_eps": 0.01,
+      "best_quality": 7.3435526691149615
+    },
+    "45": {
+      "rho": 45,
+      "best_eps": 0.01,
+      "best_quality": 9.067836941812153
+    },
+    "55": {
+      "rho": 55,
+      "best_eps": 0.01,
+      "best_quality": 8.81583145787847
+    }
+  },
+  "ridge_correlation": 0.0
+}
