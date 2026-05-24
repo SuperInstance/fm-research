@@ -1,0 +1,9 @@
+{
+  "ablations": {
+    "full_system": 2.50954594743959,
+    "no_switching": 10.273790007363814,
+    "no_coupling": 4.779982466925562,
+    "no_hierarchy": 7.838036482149646
+  },
+  "synergy_ratio": 1.026727992287971
+}
